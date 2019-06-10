@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About</title>
+<meta charset="utf-8">
+<style>
+
+body { height: 100%;
+margin: 0;
+background-color: black;
+color: white;
+font-family: 'Philosopher', sans-serif;
+}
+.name{
+	padding: 8px 8px 8px 32px;
+	font-family: 'Special Elite', cursive;
+	font-size: 20pt;
+}
+ul { background-image: url("");
+     position: fixed;
+     top: 0;
+     width: 100%; }
+
+.sidenav { height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;}
+
+.sidenav a { padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s; }
+
+.sidenav a:hover {color: #f1f1f1;
+	font-size: 220%; }
+
+.sidenav .closebtn { position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;}
+
+#sidenavlink{
+	font-family: 'Philosopher', sans-serif;
+	font-size:30px;
+	cursor:pointer;
+	margin-top: 50px;
+	margin-left: 50px;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.home{
+	font-family: 'Special Elite', cursive;
+	font-size: 42pt;
+	text-align: center;
+	margin: 0px;
+}
+
+.homelink{
+	text-decoration: none;
+	color: white;
+}
+
+.homelink:hover{
+	color: #333;
+}
+#main { transition: margin-left .5s;
+    		padding: 16px; }
+
+#about {transition: margin-left .5s;
+padding: 16px;
+width: 76%;
+background-color: #000000;
+font-family: "Century Gothic", arial, sans-serif;
+margin: auto;
+}
+#about h2 {font-size: 200%;
+font-family: Rockwell, arial, sans-serif;
+}
+#about h4 {font-size: 150%;
+font-family: Forte, arial, sans-serif;
+margin: 0;
+}
+.people{
+display: inline-block;
+text-align: center;
+margin: 20px;
+}
+footer {width: 100%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-size: 1em;
+padding: 20px;
+background-color: #000000;
+font-family: Georgia, arial, sans-serif;
+}
+hr{
+border-color: #696969;
+}
+footer span {font-weight: bold;
+}
+@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;} }
+</style>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+<link href="https://fonts.googleapis.com/css?family=Philosopher|Special+Elite" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<p class="name">Lost In Pages</p>
+	<a href="index.html">Home</a>
+	<a href="about.html">About</a>
+	<a href="book.html">Books</a>
+	<a href="orderform.html">Order Form</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="login&registration.html">Login</a>
+</div>
+
+<div id="main">
+
+<span id="sidenavlink" onclick="openNav()">&#9776; open</span>
+
+<div id="about">
+
+  <a class="homelink" href="index.html"><p class="home">Lost in Pages</p></a><br>
+
+  <h2>About <span style ="font-family: 'Special Elite', cursive;">Lost In Pages</span></h2>
+  <p>As avid readers ourselves, we understand the agony of not being able to find a book that you longed for at the local bookstore. You've waited for ages for the newest book of your favourite series to release, but you just can't find it anywhere.
+  <br><br>
+  Want to get your hands on that beautiful hardcover book but just can't afford it? Spent too much of your salary or pocket money on books? We know that feeling all too well.
+  <br><br>
+  At <i>Lost In Pages</i>, we aim to provide our fellow readers with affordable books that can make you get <i>lost in pages</i>. We hope that more people will be able to indulge in the world of books without having to empty their wallets.</p>
+  <br><br>
+  <h2>Our People</h2>
+  <div class="people">
+	<img src="images/kmq.jpg" alt="Koh Mei Quen" style="width:200px; height: 200px; border-radius: 50%;">
+	<p>Koh Mei Quen</p>
+	</div>
+	<div class="people">
+		<img src="images/tcz.jpg" alt="Teong Cai Zhi" style="width:200px; height: 200px; border-radius: 50%;">
+		<p>Teong Cai Zhi</p>
+	</div>
+	<div class="people">
+		<img src="images/tth.JPG" alt="Tan Tze Hong" style="width:200px; height: 200px; border-radius: 50%;">
+		<p>Tan Tze Hong</p>
+	</div>
+	<div class="people">
+		<img src="images/nnjs.jpeg" alt="Nicholas Nyam Jiin Shin" style="width:200px; height: 200px; border-radius: 50%;">
+		<p>Nicholas Nyam Jiin Shin</p>
+	</div>
+</div>
+<footer>
+<hr>
+Copyright &copy; 2017 by <i>Lost in Pages</i><br>
+<span>Disclaimer:</span> Materials such as images, audio, videos and book synopses on this website do not belong to <i>Lost In Pages</i>.<br>
+These materials are obtained from the Internet for assignment purpose only. 
+</footer>
+</div>
+
+</body>
+
+
+</html>

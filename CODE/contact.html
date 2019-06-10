@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact</title>
+<meta charset="utf-8">
+<style>
+
+body { height: 100%;
+margin: 0;
+background-color: black;
+color: white;
+font-family: 'Philosopher', sans-serif;
+}
+.name{
+	padding: 8px 8px 8px 32px;
+	font-family: 'Special Elite', cursive;
+	font-size: 20pt;
+}
+ul { background-image: url("");
+     position: fixed;
+     top: 0;
+     width: 100%; }
+
+.sidenav { height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;}
+
+.sidenav a { padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s; }
+
+.sidenav a:hover {color: #f1f1f1;
+	font-size: 220%; }
+
+.sidenav .closebtn { position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;}
+
+#sidenavlink{
+	font-size:30px;
+	cursor:pointer;
+	margin-top: 50px;
+	margin-left: 50px;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.home{
+	font-family: 'Special Elite', cursive;
+	font-size: 42pt;
+	text-align: center;
+	margin: 0px;
+}
+
+.homelink{
+	text-decoration: none;
+	color: white;
+}
+
+.homelink:hover{
+	color: #333;
+}		
+#main { transition: margin-left .5s;
+    		padding: 16px; }
+
+#content { transition: margin-left .5s;
+padding: 16px;
+padding-left: 60px;
+overflow: auto;
+}
+#content h2 {margin-top: 10px;
+margin-bottom: 0;
+font-family: Algerian, Arial, sans-serif;
+font-size: 3em;
+color: #efecb8;
+}
+#content p { margin-top: 5px;
+font-family: Georgia, sans-serif;
+font-size: 1.5em;
+}
+#contact { float: right;
+margin-right: 20px;
+max-width: 300px;
+padding-left: 40px;
+height: 670px;
+background-image: url(images/contact-background3.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+font-family: "Lucida Handwriting", Arial, sans-serif;
+}
+#contact h6 {font-family: "MV Boli", Arial, sans-serif;
+font-size: 1.2em;
+color: #60ffe7;
+margin-bottom: 0;
+margin-top: 40px;
+}
+#contact p {font-family: "Comic Sans MS", Arial, sans-serif;
+font-size: 1.1em;
+margin-bottom: 5px;
+}
+#contact img {margin-top: 5px;
+}
+form {font-family: Rockwell, Arial, sans-serif;
+}
+form [type="text"],[type="email"] {background-color: #434440;
+border: none;
+height: 2em;
+margin-top: 5px;
+width: 200px;
+border-radius: 5px;
+}
+textarea {background-color: #434440;
+border: none;
+margin-top: 5px;
+border-radius: 5px;
+}
+form [type="submit"] {background-color: #000000;
+border: 1px solid #ffffff;
+color: #ffffff;
+padding: 0px;
+height: 40px;
+width: 230px;
+font-size: 110%;
+border-radius: 20px;
+font-family: "Segoe Print", arial, sans-serif;
+}
+footer {width: 100%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+font-size: 1em;
+padding: 20px;
+background-color: #000000;
+font-family: Georgia, arial, sans-serif;
+}
+hr{
+border-color: #696969;
+}
+footer span {font-weight: bold;
+}
+@media screen and (max-height: 450px) { .sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;} }
+</style>
+
+<script>
+function validateForm() {
+if (document.forms[0].name.value == "") {
+	alert("Name field cannot be blank.");
+	return false;
+}
+if (document.forms[0].contactnum.value == "") {
+	alert("Contact field cannot be blank.");
+	return false;
+}
+if (document.forms[0].email.value == "") {
+	alert("E-mail field cannot be blank.");
+	return false;
+}
+if (document.forms[0].message.value == "") {
+	alert("Please leave a feedback before you submit the form.");
+	return false;
+}
+alert("You have successfully submitted the form.");
+document.getElementById("contactform").reset();
+return true;
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+	document.getElementById("content").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("content").style.marginLeft = "0";
+}
+</script>
+<link href="https://fonts.googleapis.com/css?family=Philosopher|Special+Elite" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<p class="name">Lost In Pages</p>
+	<a href="index.html">Home</a>
+	<a href="about.html">About</a>
+	<a href="book.html">Books</a>
+	<a href="orderform.html">Order Form</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="login&registration.html">Login</a>
+</div>
+
+<div id="main">
+  <span id="sidenavlink" onclick="openNav()">&#9776; open</span>
+  <a class="homelink" href="index.html"><p class="home">Lost in Pages</p></a><br>
+</div>
+
+<div class="seperate">
+<div id="content">
+  <div id="contact">
+    <h6>E-MAIL</h6>
+	<p>info@lostinpages.com</p>
+	<h6>TELEPHONE</h6>
+	<p>+609 749 4059</p>
+	<br>Know more about us!<br>
+	<a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook" width="50" height="50"></a>
+	<a href="https://twitter.com/?lang=en"><img src="images/twitter.png" alt="Twitter" width="50" height="50"></a>
+	<a href="https://www.instagram.com/?hl=en"><img src="images/instagram.jpg" alt="Instagram" width="50" height="50"></a>
+  </div>
+  <h2>Contact Us!</h2>
+  <p>We are here to answer any questions you may have about our services. Feel free to contact us without any further hesitation.</p>
+  <form method="post" id="contactform">
+  <label>NAME<br>
+  <input type="text" name="name" id="name"><br><br></label>
+  <label>CONTACT<br>
+  <input type="text" name="contactnum" id="contactnum"><br><br></label>
+  <label>E-MAIL<br>
+  <input type="email" name="email" id="email"><br><br></label>
+  <label>MESSAGE<br>
+  <textarea name="message" id="message" cols="40" rows="10"></textarea></label><br><br>
+  <input type="submit" value="Submit your query!" onclick="return validateForm();">
+  </form>
+</div>
+</div>
+
+
+<footer>
+<hr>
+Copyright &copy; 2017 by <i>Lost in Pages</i><br>
+<span>Disclaimer:</span> Materials such as images, audio, videos and book synopses on this website do not belong to <i>Lost In Pages</i>.<br>
+These materials are obtained from the Internet for assignment purpose only. 
+</footer>
+</body>
+</html>

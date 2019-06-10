@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Order Form</title>
+<meta charset="utf-8">
+<style>
+
+body { height: 100%;
+margin: 0;
+background-color: black;
+color: white;
+font-family: 'Philosopher', sans-serif;
+}
+.name{
+	padding: 8px 8px 8px 32px;
+	font-family: 'Special Elite', cursive;
+	font-size: 20pt;
+}
+ul { background-image: url("");
+     position: fixed;
+     top: 0;
+     width: 100%; }
+
+.sidenav { height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;}
+
+.sidenav a { padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s; }
+
+.sidenav a:hover {color: #f1f1f1;
+	font-size: 220%; }
+
+.sidenav .closebtn { position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;}
+	
+#sidenavlink{
+	font-size:30px;
+	cursor:pointer;
+	margin-top: 50px;
+	margin-left: 50px;
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.home{
+	font-family: 'Special Elite', cursive;
+	font-size: 42pt;
+	text-align: center;
+	margin: 0px;
+}
+
+.homelink{
+	text-decoration: none;
+	color: white;
+}
+
+.homelink:hover{
+	color: #333;
+}		
+#main { transition: margin-left .5s;
+padding: 16px; 
+}
+#content {margin-bottom: 30px;
+transition: margin-left .5s;
+padding-left: 40px;
+}
+#cart {margin: auto;
+width: 1300px;
+text-align: center;
+border: 1px solid #000000;
+border-radius: 10px;
+background-color: #1f1f21;
+border-spacing: 0;
+font-family: "Comic Sans MS", arial, sans-serif;
+font-size: 115%;
+}
+#cart caption {text-align: left;
+font-family: Forte, sans-serif, arial;
+font-size: 40px;
+padding: 10px;
+}
+#cart caption p {font-family: 'Philosopher', sans-serif;
+font-size: 20px;
+padding-top: 0;
+margin-top: 0;
+}
+#cart tr, td, th {padding: 10px;
+border: 1px solid #000000;
+}
+#cart tr:first-of-type {background-color: #282828;
+font-family: "MV Boli", arial, sans-serif;
+font-size: 125%;
+}
+#cart td input {text-align: center;
+width: auto;
+height: 1.8em;
+font-size: 15px;
+background-color: #1f1f21;
+border: none;
+color: #ffffff;
+font-family: "Century Gothic", arial, sans-serif;
+}
+#cart td input[name="isbn"]{width: 60px;
+}
+#cart td input[name="quantity"] {width: 90px;
+}
+#customerinfo {margin: auto;
+width: 1300px;
+text-align: left;
+margin-bottom: 100px;
+transition: margin-left .5s;
+padding-left: 50px;
+}
+#customerinfo p {padding-left: 5px;
+font-size: 130%;
+font-family: Rockwell, sans-serif;
+}
+#customerinfo input {background-color: #575859;
+height: 35px;
+width: 400px;
+border: none;
+font-size: 120%;
+color: #b2b4b7;
+font-family: "Century Gothic", arial, sans-serif;
+}
+.checkout {float: right;
+margin-top: 15px;
+background-color: #000000;
+border: 1px solid #ffffff;
+color: #ffffff;
+padding: 0px;
+height: 40px;
+width: 250px;
+font-size: 110%;
+border-radius: 20px;
+font-family: "Segoe Print", arial, sans-serif;
+}
+footer {width: 100%;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+text-align: center;
+font-size: 1em;
+padding: 20px;
+background-color: #000000;
+font-family: Georgia, arial, sans-serif;
+}
+footer span {font-weight: bold;
+}
+@media screen and (max-height: 450px) { .sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;} }
+</style>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+	document.getElementById("content").style.marginLeft = "250px";
+	document.getElementById("customerinfo").style.marginLeft = "250px";
+	
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("content").style.marginLeft = "0";
+	document.getElementById("customerinfo").style.marginLeft = "0";
+}
+function validateForm() {
+if (document.forms[1].customername.value == "") {
+	alert("Name field cannot be blank.");
+	return false;
+}
+if (document.forms[1].contact.value == "") {
+	alert("Contact field cannot be blank.");
+	return false;
+}
+if (document.forms[1].email.value == "") {
+	alert("E-mail field cannot be blank.");
+	return false;
+}
+checkout();
+}
+function checkout() {
+	if (confirm("Are you sure to submit this form?") == true){
+		document.getElementById("customerform").reset();
+		document.getElementById("try").reset();
+	}
+}
+	
+</script>
+<link href="https://fonts.googleapis.com/css?family=Philosopher|Special+Elite" rel="stylesheet"> 
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<p class="name">Lost In Pages</p>
+	<a href="index.html">Home</a>
+	<a href="about.html">About</a>
+	<a href="book.html">Books</a>
+	<a href="orderform.html">Order Form</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="login&registration.html">Login</a>
+</div>
+
+<div id="main">
+  <span id="sidenavlink" onclick="openNav()">&#9776; open</span>
+  <a class="homelink" href="index.html"><p class="home">Lost in Pages</p></a><br>
+</div>
+
+<div id="content">
+  <table name="cart" id="cart">
+  <caption>Order Form
+  <p>Feel free to order from us!</p></caption>
+  <form id="order">
+  <tr>
+    <th>Index</th>
+	<th>Book Title</th>
+	<th>Author</th>
+	<th>Quantity</th>
+	<th>Remarks</th>
+  </tr>
+  <tr>
+    <td>1</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+    <td>2</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>3</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+    <td>4</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>5</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>6</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>7</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>8</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>9</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  <tr>
+	<td>10</td>
+	<td><input type="text" name="title"></td>
+	<td><input type="text" name="author"></td>
+	<td><input type="text" name="quantity"></td>
+	<td><input type="text" name="remark"></td>
+  </tr>
+  </form>
+  </table>
+
+</div>
+<div id="customerinfo">
+  <form id="customerform">
+	<label><p>Name</p>
+	<input type="text" name="customername"></label>
+	<label><p>Contact Number</p>
+	<input type="text" name="contact"></label>
+	<label><p>E-mail Address</p>
+	<input type="email" name="email"></label><br>
+  </form>
+  <button type="submit" class="checkout" onclick="validateForm();">Finish your shopping!</button>
+</div>
+
+<footer>
+Copyright &copy; 2017 by <i>Lost in Pages</i><br>
+<span>Disclaimer:</span> Materials such as images, audio, videos and book synopses on this website do not belong to <i>Lost In Pages</i>.<br>
+These materials are obtained from the Internet for assignment purpose only. 
+</footer>
+</body>
+</html>

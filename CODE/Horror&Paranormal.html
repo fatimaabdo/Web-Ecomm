@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title> Horror And Paranormal </title>
+<meta charset="utf-8">
+<link href = "https://fonts.googleapis.com/css?family=Nosifer|Philosopher|Special+Elite" rel = "stylesheet">
+<style>
+
+#music { display: none; }
+
+#main { transition: margin-left .5s; }
+
+body { height: 100%;
+	   margin: 0; 
+	   font-family: 'Philosopher', sans-serif; 
+	   color: white; }
+	   
+.sidenav { height: 100%;
+           width: 0;
+		   position: fixed;
+		   z-index: 1;
+		   top: 0;
+		   left: 0;
+		   background-color: black;
+		   overflow-x: hidden;
+		   transition: 0.5s;
+		   padding-top: 60px; }
+
+.sidenav a { padding: 8px 8px 8px 32px;
+		     text-decoration: NONE;
+             font-size: 25px;
+		     color: LightSlateGray;
+		     display: block;
+			 transition: 0.3s; }
+
+.sidenav .closebtn { position: absolute;
+				     top: 0;
+					 right: 25px;
+					 font-size: 40px;
+					 margin-left: 50px; }
+					 			 
+.cover { background-image: url("images/horror.jpg");
+		 min-height: 850px;
+		 background-size: cover;
+		 position: relative; 
+		 background-attachment: fixed;}
+		 
+.categorieslist{ list-style: none; 
+				 text-align: center; }
+
+.categories-item{ display: inline-block;
+				  padding-bottom: 16px;
+				  margin-bottom: 20px;}
+
+.categorieslink{ text-decoration: none;
+				 color: black;
+				 padding: 16px;
+				 background-color: #e5e4e2; }
+
+.categories-item .categorieslink:hover{ background-color: #b6b6b4;
+										text-decoration: none;
+										color: black;
+										opacity: 0.6; }
+
+.text { text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white; }
+		
+.image {  border-radius: 30px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		  padding-right: 15px; 
+		  padding-top: 10px;
+		  padding-left: 45px;
+		  margin: 15px; }
+		  
+.image:hover { opacity: 0.7; }
+
+/* The Modal (background) */
+.modal { display: none; /* Hidden by default */
+		 position: fixed; /* Stay in place */
+		 z-index: 1; /* Sit on top */
+		 padding-top: 100px; /* Location of the box */
+		 left: 0;
+		 top: 0;
+		 width: 100%; /* Full width */
+		 height: 100%; /* Full height */
+		 overflow: auto; /* Enable scroll if needed */
+		 background-color: rgb(0,0,0); /* Fallback color */
+		 background-color: rgba(0,0,0,0.9); } /* Black w/ opacity */ 
+
+/* Modal Content (image) */
+.modal-content { margin: auto;
+				 display: block;
+			     width: 350px;
+				 max-width: 550px; }
+
+/* Caption of Modal Image */
+#caption { margin: auto;
+		   display: block;
+		   width: 80%;
+		   max-width: 700px;
+		   text-align: justify;
+		   color: #ccc;
+		   padding: 10px 0;
+		   height: 850px;
+		   font-size: 20px; }
+
+/* Add Animation */
+.modal-content, #caption { -webkit-animation-name: zoom;
+						   -webkit-animation-duration: 0.6s;
+						    animation-name: zoom;
+							animation-duration: 0.6s; }		
+
+#footer { width: 100%;
+		  text-align: center;
+		  font-size: 1em;
+		  color: black; }
+
+/* The Close Button */
+.close { position: absolute;
+		 top: 15px;
+	     right: 35px;
+		 color: #f1f1f1;
+		 font-size: 40px;
+		 font-weight: bold;
+		 transition: 0.3s; }
+
+.close:hover,
+.close:focus { color: #bbb;
+			   text-decoration: none;
+			   cursor: pointer; }
+			  
+ 
+@media screen and (max-height: 450px) { .sidenav {padding-top: 15px;}
+										.sidenav a {font-size: 18px;} }	 
+					  
+			   
+@-webkit-keyframes zoom { from {-webkit-transform:scale(0)} 
+						  to {-webkit-transform:scale(1)} }
+
+@keyframes zoom { from {transform:scale(0)} 
+				  to {transform:scale(1)} }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){ .modal-content { width: 100%; } }
+	
+</style>
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p style = 'font-family: Special Elite; color: white; font-size: 20pt; padding: 8px 8px 8px 32px;'> Lost In Pages </p>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="book.html">Books</a>
+  <a href="orderform.html">Order Form</a>
+  <a href="contact.html">Contacts</a>
+  <a href="login&registration.html">Login</a>
+</div>
+
+<div id = "main">
+<div class="cover">
+<span style="font-size:30px; cursor:pointer; padding-left: 15px;" onclick="openNav()">&#9776; open</span></font>
+	<div class="text">
+		<h1 style="font-size: 7vh; font-family: 'Nosifer', cursive; color: orangered; text-shadow: 4px 4px 4px darkred;"> Welcome To The Dark Side </h1>
+	</div>
+</div>
+	<nav>	
+		<ul class="categorieslist">
+			<li class="categories-item"><a class="categorieslink" href="fantasy.html">Fantasy</a></li>
+			<li class="categories-item"><a class="categorieslink" href="sciencefiction.html">Science Fiction</a></li>
+			<li class="categories-item"><a class="categorieslink" href="crime-thriller-mystery.html">Crime, Thriller and Mystery</a></li>
+			<li class="categories-item"><a class="categorieslink" href="romance.html">Romance</a></li>
+			<li class="categories-item"><a class="categorieslink" href="classics.html">Classics</a></li>
+			<li class="categories-item"><a class="categorieslink" href="nonfic.html">Non-Fiction</a></li>
+			<li class="categories-item"><a class="categorieslink" href="Horror&Paranormal.html">Horror and Paranormal</a></li>
+		</ul>
+	</nav>
+
+
+
+<br><br>
+<br><br>
+
+<img id="image1" class="image" src="images/devil.jpg" 
+alt="Young Jude Brighton has been missing for three days, and while the search for him is in full swing in the small town of Deer Valley, Oregon, the locals are starting to lose hope.
+	   They’re well aware that the first forty-eight hours are critical and after that, the odds usually point to a worst-case scenario. 
+	   And despite Stevie Clark’s youth, he knows that, too; he’s seen the cop shows. He knows what each ticking moment may mean for Jude, his cousin and best friend.
+	   That, and there was that boy, Max Larsen...the one from years ago, found dead after also disappearing under mysterious circumstances.
+       And then there were the animals: pets gone missing out of yards. 
+	   For years, the residents of Deer Valley have murmured about these unsolved crimes…and that a killer may still be lurking around their quiet town. 
+	   Now, fear is reborn—and for Stevie, who is determined to find out what really happened to Jude, the awful truth may be too horrifying to imagine.' 
+	   <br><br>
+	   <p>Price: RM29.50</p>"
+width = "250" height = "450">
+
+	
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image2" class="image" src="images/Haunted-Nights.jpg" 
+alt="Sixteen never-before-published chilling tales that explore every aspect of our darkest holiday, Halloween, co-edited by Ellen Datlow, one of the most successful and respected genre editors, and Lisa Morton, a leading authority on Halloween.
+	   In addition to stories about scheming jack-o'-lanterns, vengeful ghosts, otherworldly changelings, disturbingly realistic haunted attractions, masks that cover terrifying faces, murderous urban legends, parties gone bad, cult Halloween movies, and trick or treating in the future, Haunted Nights also offers terrifying and mind-bending explorations of related holidays like All Souls' Day, Dia de los Muertos, and Devil's Night.' 
+	   <br><br>
+	   <p>Price: RM35.00</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+	
+<img id="image3" class = "image" src="images/behindu.jpg" 
+alt="Four families wake up one morning in their caravans, next to their cars, on an ordinary campsite in southern Sweden. 
+	 However, during the night something strange has happened. Everything else has disappeared, and the world has been transformed into an endless expanse of grass.
+	 The sky is blue, but there is no sign of the sun; there are no trees, no flowers, no birds. And every radio plays nothing but the songs of sixties pop icon Peter Himmelstrand.
+	 As the holiday-makers try to come to terms with what has happened, they are forced to confront their deepest fears and secret desires, and in many cases expose the less appealing aspects of their character. 
+	 Past events that they have tried to bury rise to the surface and take on a terrifying physical form.
+	 Can any of them find a way back to reality?' 
+	   <br><br>
+	   <p>Price: RM45.50</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+	
+<img id="image4" class = "image" src="images/30285138.jpg" 
+alt="Four families wake up one morning in their caravans, next to their cars, on an ordinary campsite in southern Sweden. 
+	 However, during the night something strange has happened. Everything else has disappeared, and the world has been transformed into an endless expanse of grass.
+	 The sky is blue, but there is no sign of the sun; there are no trees, no flowers, no birds. And every radio plays nothing but the songs of sixties pop icon Peter Himmelstrand.
+	 As the holiday-makers try to come to terms with what has happened, they are forced to confront their deepest fears and secret desires, and in many cases expose the less appealing aspects of their character. 
+	 Past events that they have tried to bury rise to the surface and take on a terrifying physical form.
+	 Can any of them find a way back to reality?' 
+	   <br><br>
+	   <p>Price: RM33.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image5" class = "image" src="images/UnderAWatchfulEye.jpg" 
+alt="When the sudden appearance of a dark figure shatters his idyllic coastal life, he soon realizes that the murky past he thought he'd left behind has far from forgotten him.
+	 What's more unsettling is the strange atmosphere that engulfs him at every sighting, plunging his mind into a terrifying paranoia.
+	 To be a victim without knowing the tormentor. 
+	 To be despised without knowing the offence caused. To be seen by what nobody else can see. 
+	 These are the thoughts which plague his every waking moment.
+	 Imprisoned by despair, Seb fears his stalker is not working alone, but rather is involved in a wider conspiracy that threatens everything he has worked for. 
+	 For there are doors in this world that open into unknown places. 
+	 Places used by the worst kind of people to achieve their own ends. 
+	 And once his investigation leads him to stray across the line and into mortal danger, he risks becoming another fatality in a long line of victims . . .' 
+	   <br><br>
+	   <p>Price: RM45.50</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image6" class = "image" src="images/Rawblood.jpg" 
+alt="In 1910, eleven year old Iris Villarca lives with her father at Rawblood, a lonely house on Dartmoor.
+	 Iris and her father are the last of their name. The Villarcas always die young, bloodily. 
+	 Iris knows it’s because of a congenital disease which means she must be strictly isolated. 
+	 Papa told her so.
+	 Forbidden to speak to other children or the servants, denied her one friend, Iris grows up in solitude. 
+	 But she reads books. And one sunlit autumn day, beside her mother’s grave, she forces the truth from her father. 
+	 The disease is biologically impossible. A lie, to cover a darker secret.
+	 The Villarcas are haunted, through the generations, by her.
+	 She is white, skeletal, covered with scars. Her origins are a mystery but her purpose is clear.
+	 When a Villarca marries, when they love, when they have a child – she comes and death follows.
+	 Iris makes her father a promise: to remain alone all her life. 
+	 But when she’s fifteen, she breaks it. 
+	 The consequences of her choice are immediate and horrific.
+	 Iris’s story is interwoven with the past, the voices of the dead – Villarcas, taken by her. 
+	 Iris’s grandmother sets sail from Dover to Italy with a hired companion, to spend her final years in the sun before consumption takes her.
+	 Instead she meets betrayal, and a fate worse than death. 
+	 Iris’s father, his medical career in ruins, conducts unconscionable experiments, to discover how she travels in the Villarca blood. 
+	 Iris’s mother, pregnant, walks the halls of Rawblood whispering to her, coaxing her to come. As the narratives converge, Iris seeks her out in a confrontation which shatters her past and her reality, revealing the chasm in Iris’s own, fractured identity.
+	 Who is she? What does she desire? The answer is more terrible and stranger than Iris could have imagined.' 
+	   <br><br>
+	   <p>Price: RM30.99</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image7" class = "image" src="images/The-Exorcist.JPG" 
+alt="Four decades after it first shook the nation, then the world, William Peter Blatty's thrilling masterwork of faith and demonic possession returns in an even more powerful form. 
+	 Raw and profane, shocking and blood-chilling, it remains a modern parable of good and evil and perhaps the most terrifying novel ever written.' 
+	   <br><br>
+	   <p>Price: RM55.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image8" class = "image" src="images/{BE02C30A-D470-4A0B-AE03-F83E994FBAC9}Img400.jpg" 
+alt="Hell House by Richard Matheson is a story that takes four very different people into a house that has a life of it's own. After sitting empty and boarded up by the owners for thirty years, Rolf Rudolph Deutsch wants a small group of hand selected experts from several unique fields of study to go into the house and stay for one week. 
+	 With the promise of great renumeration, all he asks in return is that they answer definitively the one question he has: Is there life after death? Close to death himself, Deutsch needs to know. 
+	 In fact, he is consumed with the need to have that one question answered. 
+	 In return for his money, he wants to know definitively if anything lives in the Belasco house in Maine dubbed Hell House.
+	 Dr. Barrett is the first one summoned and he is unable to turn down the offer of $100,000.
+	 He agrees to go to Hell House with a couple of stipulations: Deutsch is to finance the completion of a machine Dr. Barrett created and calls a Reversor and his wife is to join him. 
+	 Deutsch happily agrees and tells the doctor that he will be joined by a spiritualist and a medium - Benjamin Fischer, the lone survivor of the last encounter with Hell House.
+	 Aptly named, the house is full of surprises for its newest troupe.
+	 Before one seemingly simple week is over, two of the professionals will die and the two that survive will come very close to losing their lives on more than one occasion.
+	 The house is haunted by Emeric Belasco who evades the removal of his temporal spirit by way of Dr. Barrett's Reversor because his remains are sealed in a lead walled room behind the alter in his chapel. 
+	 Emeric returns after the house has supposedly been cleansed, and takes Dr. Barrett's life, but not before he reveals himself just as he had to Reverend Florence Tanner before him. 
+	 Invading the minds of all who enter his house, Emeric forces acts of sexual perversion on his victims, possessing their spirits and breaking them, one by one.
+	 In the end, it is former guest and world renowned Medium Benjamin Fischer and Edith Barrett who unravel the truth and put Emeric Belasco in his place. 
+	 Only they see him for the pathetic little man he was, and understand why he felt the need to terrorize. 
+	 A defense against his own feelings of inadequacy, Emeric is finally confronted and silenced forever. 
+	 Sadly, Rolf Deutsch will never know any of this as he dies before knowing were is life after death before finding his way there himself.' 
+	   <br><br>
+	   <p>Price: RM35.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image9" class = "image" src="images/9781101989197_p0_v1_s.jpg" 
+alt="For four aging men in the terror-stricken town of Milburn, New York, an act inadvertently carried out in their youth has come back to haunt them. 
+	 Now they are about to learn what happens to those who believe they can bury the past -- and get away with murder.' 
+	   <br><br>
+	   <p>Price: RM25.65</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image10" class = "image" src="images/cc.jpg" 
+alt="THE PAST... Caught behind the lines of Hitler’s Final Solution, Saul Laski is one of the multitudes destined to die in the notorious Chelmno extermination camp. 
+	 Until he rises to meet his fate and finds himself face to face with an evil far older, and far greater, than the Nazi’s themselves...
+	 THE PRESENT... Compelled by the encounter to survive at all costs, so begins a journey that for Saul will span decades and cross continents, plunging into the darkest corners of 20th century history to reveal a secret society of beings who may often exist behind the world's most horrible and violent events.
+	 Killing from a distance, and by darkly manipulative proxy, they are people with the psychic ability to 'use' humans: read their minds, subjugate them to their wills, experience through their senses, feed off their emotions, force them to acts of unspeakable aggression. Each year, three of the most powerful of this hidden order meet to discuss their ongoing campaign of induced bloodshed and deliberate destruction. 
+	 But this reunion, something will go terribly wrong. Saul’s quest is about to reach its elusive object, drawing hunter and hunted alike into a struggle that will plumb the depths of mankind’s attraction to violence, and determine the future of the world itself...' 
+	   <br><br>
+	   <p>Price: RM48.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image11" class = "image" src="images/153025.jpg" 
+alt="Aging, self-absorbed rock star Judas Coyne has a thing for the macabre -- his collection includes sketches from infamous serial killer John Wayne Gacy, a trepanned skull from the 16th century, a used hangman's noose, Aleister Crowley's childhood chessboard, etc. -- so when his assistant tells him about a ghost for sale on an online auction site, he immediately puts in a bid and purchases it.
+	 The black, heart-shaped box that Coyne receives in the mail not only contains the suit of a dead man but also his vengeance-obsessed spirit.
+	 The ghost, it turns out, is the stepfather of a young groupie who committed suicide after the 54-year-old Coyne callously used her up and threw her away. 
+	 Now, determined to kill Coyne and anyone who aids him, the merciless ghost of Craddock McDermott begins his assault on the rocker's sanity. ' 
+	   <br><br>
+	   <p>Price: RM51.80</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image12" class = "image" src="images/27246149.jpg" 
+alt="Remember that car that passed you near midnight on Route 66, doing 105 with its lights off? 
+	 You wondered where it was going so quickly on that dark, dusty stretch of road, motor roaring, the driver glancing out the window as he blew by.
+	 Did his greedy eyes shine silver like a coyote’s? Did he make you feel like prey?
+	 You can’t remember now.
+	 You just saw the founder of the Suicide Motor Club. Be grateful his brake lights never flashed.
+	 Be grateful his car was already full.
+	 They roam America, littering the highways with smashed cars and bled-out bodies, a gruesome reflection of the unsettled sixties. 
+	 But to anyone unlucky enough to meet them in the lonely hours of the night, they’re just a blurry memory.
+	 That is—to all but one...
+	 Two years ago, they left a witness in the mangled wreck of her family car, her husband dead, her son taken. 
+	 She remembers their awful faces, despite their tricks and glamours.
+	 And she’s coming for them—her thirst for vengeance even more powerful than their hunger for blood.
+	 On the deserted highways of America, the hunters are about to become the hunted... ' 
+	   <br><br>
+	   <p>Price: RM39.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image13" class = "image" src="images/the-ritual-adam-nevill-cover.jpg" 
+alt="Four old university friends reunite for a hiking trip in the Scandinavian wilderness of the Arctic Circle.
+	 No longer young men, they have little left in common and tensions rise as they struggle to connect.
+	 Frustrated and tired they take a shortcut that turns their hike into a nightmare that could cost them their lives.
+	 Lost, hungry and surrounded by forest untouched for millennia, they stumble across an isolated old house. 
+	 Inside, they find the macabre remains of old rites and pagan sacrifices; ancient artefacts and unidentifiable bones. 
+	 A place of dark ritual and home to a bestial presence that is still present in the ancient forest, and now they’re the prey.
+	 As the four friends struggle toward salvation they discover that death doesn’t come easy among these ancient trees...' 
+	   <br><br>
+	   <p>Price: RM40.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image14" class = "image" src="images/51qBF3gZrzL._SX335_BO1,204,203,200_.jpg" 
+alt="Travis Stillwell spends his nights searching out women in West Texas honky-tonks. 
+	 What he does with them doesn’t make him proud, just quiets the demons for a little while. 
+	 But his nights soon take a terrifying turn in a desert cantina, where Travis crosses paths with a mysterious pale-skinned girl in red boots. 
+	 Come the morning, he wakes weak and bloodied in his cabover camper, no sign of a girl, no memory of the night before.
+	 Annabelle Gaskin spies the camper parked behind her rundown motel and offers the disheveled cowboy inside a few odd jobs to pay his board. 
+	 Travis takes her up on the offer, if only to buy time, to lay low, to heal.
+	 By day, he mends the old motel, insinuating himself into the lives of Annabelle and her ten-year-old son.
+	 By night, in the cave of his camper, he fights an unspeakable hunger. 
+	 Before long, Annabelle and her boy come to realize that this strange cowboy they’ve taken in is not what he seems.
+	 Half a state away, a grizzled Texas ranger is hunting Travis down for his past misdeeds, but what he finds will lead him to a revelation far more monstrous than he could ever imagine.
+	 A man of the law, he’ll have to decide how far into the darkness he’ll go for the sake of justice. 
+	 When these lives converge on a dusty autumn night, an old evil will find new life—and new blood.
+	 Deftly written and utterly compelling, this is an atmospheric literary fiction debut perfect for fans of horror, psychological suspense, and Western fiction.' 
+	   <br><br>
+	   <p>Price: RM43.85</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image15" class = "image" src="images/23019294.jpg" 
+alt="The lives of the Barretts, a normal suburban New England family, are torn apart when fourteen-year-old Marjorie begins to display signs of acute schizophrenia.
+	 To her parents' despair, the doctors are unable to stop Marjorie's descent into madness.
+	 As their stable home devolves into a house of horrors, they reluctantly turn to a local Catholic priest for help.
+	 Father Wanderly suggests an exorcism; he believes the vulnerable teenager is the victim of demonic possession.
+	 He also contacts a production company that is eager to document the Barretts' plight. 
+	 With John, Marjorie's father, out of work for more than a year and the medical bills looming, the family agrees to be filmed, and soon find themselves the unwitting stars of The Possession, a hit reality television show. 
+	 When events in the Barrett household explode in tragedy, the show and the shocking incidents it captures become the stuff of urban legend.
+	 Fifteen years later, a bestselling writer interviews Marjorie's younger sister, Merry.
+	 As she recalls those long ago events that took place when she was just eight years old, long-buried secrets and painful memories that clash with what was broadcast on television begin to surface--and a mind-bending tale of psychological horror is unleashed, raising vexing questions about memory and reality, science and religion, and the very nature of evil' 
+	   <br><br>
+	   <p>Price: RM31.00</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image16" class = "image" src="images/23556508.jpg" 
+alt="See the girl. Leah Wilde is twenty-four, a runaway on a black motorbike, hunting for answers while changing her identity with each new Central European town.
+	 See the man, having come of age in extraordinary suffering and tragedy in nineteenth-century Budapest; witness to horror, to love, to death, and the wrath of a true monster.
+	 Izsák still lives in the present day, impossibly middle-aged. He's driven not only to hunt this immortal evil but to find his daughter, stolen from an Arctic cabin and grown into the thing Izsák has sworn to kill.
+	 See the monster, a beautiful, seemingly young woman who stalks the American West, seeking the young and the strong to feed upon, desperate to return to Europe where her coven calls.
+	 Written in the Blood is the epic thriller of the year, a blazing and dexterous saga spanning generations, and threading the lives of five individuals driven by love, by sacrifice, by hunger and by fear. 
+	 They seek to save a race--or to extinguish it forever.' 
+	   <br><br>
+	   <p>Price: RM47.20</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image17" class = "image" src="images/7094569.jpg" 
+alt="The year was 2014. We had cured cancer.
+	 We had beaten the common cold. 
+	 But in doing so we created something new, something terrible that no one could stop.
+	 The infection spread, virus blocks taking over bodies and minds with one, unstoppable command: FEED. Now, twenty years after the Rising, bloggers Georgia and Shaun Mason are on the trail of the biggest story of their lives—the dark conspiracy behind the infected.
+	 The truth will get out, even if it kills them.' 
+	   <br><br>
+	   <p>Price: RM40.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image18" class = "image" src="images/brackenmacleod.jpg" 
+alt="In the spirit of John Carpenter's The Thing and Jacob's Ladder comes a terrifying, icebound thriller where nothing is quite what it seems.
+	 Badly battered by an apocalyptic storm, the crew of the Arctic Promise find themselves in increasingly dire circumstances as they sail blindly into unfamiliar waters and an ominously thickening fog. 
+	 Without functioning navigation or communication equipment, they are lost and completely alone. One by one, the men fall prey to a mysterious illness. 
+	 Deckhand Noah Cabot is the only person unaffected by the strange force plaguing the ship and her crew, which does little to ease their growing distrust of him.
+	 Dismissing Noah's warnings of worsening conditions, the captain of the ship presses on until the sea freezes into ice and they can go no farther. 
+	 When the men are ordered overboard in an attempt to break the ship free by hand, the fog clears, revealing a faint shape in the distance that may or may not be their destination. 
+	 Noah leads the last of the able-bodied crew on a journey across the ice and into an uncertain future where they must fight for their lives against the elements, the ghosts of the past and, ultimately, themselves.' 
+	   <br><br>
+	   <p>Price: RM39.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image19" class = "image" src="images/51Pj9qyjw5L._SX331_BO1,204,203,200_.jpg" 
+alt="Detective Gabriella Versado has seen a lot of bodies, but this one is unique even by Detroit's standards: half boy, half deer, somehow fused together.
+	 As stranger and more disturbing bodies are discovered, how can the city hold on to a reality that is already tearing at its seams? If you're Detective Versado's geeky teenage daughter, Layla, you commence a dangerous flirtation with a potential predator online.
+	 If you're desperate freelance journalist Jonno, you do whatever it takes to get the exclusive on a horrific story.
+	 If you're Thomas Keen, known on the street as TK, you'll do what you can to keep your homeless family safe--and find the monster who is possessed by the dream of violently remaking the world.
+	 If Lauren Beukes's internationally bestselling The Shining Girls was a time-jumping thrill ride through the past, her Broken Monsters is a genre-redefining thriller about broken cities, broken dreams, and broken people trying to put themselves back together again.' 
+	   <br><br>
+	   <p>Price: RM45.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image20" class = "image" src="images/22714192._UY200_.jpg" 
+alt="Marty Strauss, a gambling addict recently released from prison, is hired to be the personal bodyguard of Joseph Whitehead, one of the wealthiest men in the world.
+	 The job proves more complicated and dangerous than he thought, however, as Marty soon gets caught up in a series of supernatural events involving Whitehead, his daughter (who is a heroin addict), and a devilish man named Mamoulian, with whom Whitehead made a Faustian bargain many years earlier, during World War II.
+	 As time passes, Mamoulian haunts Whitehead using his supernatural powers (such as the ability to raise the dead), urging him to complete his pact with him. 
+	 Eventually Whitehead decides to escape his fate after a few encounters with Mamoulian and having his wife, former bodyguard, and now his daughter Carys taken away from him. 
+	 With hope still left to save Carys, Marty Strauss, although reluctant to get involved in the old man Whiteheads deserved punishment, decides to get involved and attempt to save the innocent gifted addict from being another victim to the damnation game.' 
+	   <br><br>
+	   <p>Price: RM44.95</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+<br><br>
+
+<hr>
+<footer id = "footer">
+Copyright &copy; 2017 Lost In Pages
+<br>
+<b>Disclaimer: </b> Materials such as images, audio, videos and book synopses on this website do not belong to <i> Lost In Pages </i>
+<br>
+These materials are obtained from the internet for assignment purpose only.
+</footer>
+
+<br>
+
+<div id = "music">
+<audio autoplay>
+	<source src = "audio/One Missed Call Theme Song (Mp3Goo.io).mp3" type = "audio/mpeg">
+	<p> If you can read this, it means that your browser does not support the audio element. </p>
+</audio>
+<div>
+
+</body>
+
+<script>
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("sidenav").style.marginLeft = "250px";
+	document.getElementById("main").style.width = "250px";
+	document.getElementById("cover").style.width = "250px";
+	document.getElementById("text").style.width = "250px";
+	document.getElementById("categories-item").style.width = "250px";
+    document.getElementById("categorieslink").style.marginLeft = "500px";
+    document.getElementById("categorieslist").style.marginLeft = "250px"; }
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("sidenav").style.marginLeft= "0";
+	document.getElementById("main").style.width = "250px";
+	document.getElementById("cover").style.marginLeft= "0";
+    document.getElementById("text").style.marginLeft= "0";
+    document.getElementById("categories-item").style.marginLeft= "0";
+    document.getElementById("categorieslink").style.marginLeft= "0";
+    document.getElementById("categorieslist").style.marginLeft= "0"; }
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal by using its "alt" as a caption
+var modalImg = document.getElementById("image");
+var captionText = document.getElementById("caption");
+
+var img1 = document.getElementById('image1')
+img1.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img2 = document.getElementById('image2')
+img2.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+
+var img3 = document.getElementById('image3')
+img3.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+
+var img4 = document.getElementById('image4')
+img4.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img5 = document.getElementById('image5')
+img5.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img6 = document.getElementById('image6')
+img6.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img7 = document.getElementById('image7')
+img7.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img8 = document.getElementById('image8')
+img8.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img9 = document.getElementById('image9')
+img9.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img10 = document.getElementById('image10')
+img10.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img11 = document.getElementById('image11')
+img11.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img12 = document.getElementById('image12')
+img12.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img13 = document.getElementById('image13')
+img13.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img14 = document.getElementById('image14')
+img14.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img15 = document.getElementById('image15')
+img15.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img16 = document.getElementById('image16')
+img16.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img17 = document.getElementById('image17')
+img17.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img18 = document.getElementById('image18')
+img18.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img19 = document.getElementById('image19')
+img19.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img20 = document.getElementById('image20')
+img20.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { modal.style.display = "none"; }
+
+</script>
+
+</html>

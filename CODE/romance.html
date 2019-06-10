@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title> Romance </title>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes|Pacifico|Philosopher|Special+Elite" rel="stylesheet">
+<style>
+
+#music { display: none; }
+			 
+#main { transition: margin-left .5s; }
+		
+body { height: 100%;
+	   margin: 0;
+	   font-family: 'Philosopher', sans-serif; 
+	   color: white; }
+	   
+.sidenav { height: 100%;
+           width: 0;
+		   position: fixed;
+		   z-index: 1;
+		   top: 0;
+		   left: 0;
+		   background-color: black;
+		   overflow-x: hidden;
+		   transition: 0.5s;
+		   padding-top: 60px; }
+
+.sidenav a { padding: 8px 8px 8px 32px;
+		     text-decoration: NONE;
+             font-size: 25px;
+		     color: LightSlateGray;
+		     display: block;
+			 transition: 0.3s; }
+
+.sidenav .closebtn { position: absolute;
+				     top: 0;
+					 right: 25px;
+					 font-size: 40px;
+					 margin-left: 50px; }
+			 
+.cover { background-image: url("images/love_kiss.jpg");
+		 min-height: 850px;
+		 background-size: cover;
+		 position: relative; 
+		 background-attachment: fixed;}		
+
+.categorieslist{ list-style: none; 
+				 text-align: center; }
+
+.categories-item{ display: inline-block;
+				  padding-bottom: 16px; 
+				  margin-bottom: 20px; }
+
+.categorieslink{ text-decoration: none;
+				 color: black;
+				 padding: 16px;
+				 background-color: #e5e4e2; }
+
+.categories-item .categorieslink:hover{ background-color: #b6b6b4;
+										text-decoration: none;
+										color: black;
+										opacity: 0.6; }		 
+
+.text { text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white; }
+		
+.image {  border-radius: 30px;
+		  cursor: pointer;
+		  transition: 0.3s;
+		  padding-right: 15px; 
+		  padding-top: 10px;
+		  padding-left: 45px;
+		  margin: 15px; }
+		  
+.image:hover { opacity: 0.7; }
+
+/* The Modal (background) */
+.modal { display: none; /* Hidden by default */
+		 position: fixed; /* Stay in place */
+		 z-index: 1; /* Sit on top */
+		 padding-top: 100px; /* Location of the box */
+		 left: 0;
+		 top: 0;
+		 width: 100%; /* Full width */
+		 height: 100%; /* Full height */
+		 overflow: auto; /* Enable scroll if needed */
+		 background-color: rgb(0,0,0); /* Fallback color */
+		 background-color: rgba(0,0,0,0.9); } /* Black w/ opacity */ 
+
+/* Modal Content (image) */
+.modal-content { margin: auto;
+				 display: block;
+			     width: 350px;
+				 max-width: 550px; }
+
+/* Caption of Modal Image */
+#caption { margin: auto;
+		   display: block;
+		   width: 80%;
+		   max-width: 700px;
+		   text-align: justify;
+		   color: #ccc;
+		   padding: 10px 0;
+		   height: 850px;
+		   font-size: 20px; }
+
+/* Add Animation */
+.modal-content, #caption {  -webkit-animation-name: zoom;
+						    -webkit-animation-duration: 0.6s;
+							animation-name: zoom;
+							animation-duration: 0.6s; }		
+
+
+#footer { width: 100%;
+		  text-align: center;
+		  font-size: 1em;
+		  color: black; }
+
+/* The Close Button */
+.close { position: absolute;
+		 top: 15px;
+	     right: 35px;
+		 color: #f1f1f1;
+		 font-size: 40px;
+		 font-weight: bold;
+		 transition: 0.3s; }
+
+.close:hover,
+.close:focus { color: #bbb;
+			   text-decoration: none;
+			   cursor: pointer; }
+			   
+ 
+@media screen and (max-height: 450px) { .sidenav {padding-top: 15px;}
+										.sidenav a {font-size: 18px;} }	 
+			   
+@-webkit-keyframes zoom { from {-webkit-transform:scale(0)} 
+						  to {-webkit-transform:scale(1)} }
+
+@keyframes zoom { from {transform:scale(0)} 
+				  to {transform:scale(1)} }
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){ .modal-content { width: 100%; } }
+	
+</style>
+</head>
+
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p style = 'font-family: Special Elite; color: white; font-size: 20pt; padding: 8px 8px 8px 32px;'> Lost In Pages </p>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="book.html">Books</a>
+  <a href="orderform.html">Order Form</a>
+  <a href="contact.html">Contacts</a>
+  <a href="login&registration.html">Login</a>
+</div>
+
+<div id = "main">
+<div class="cover">
+<span style="font-size:35px; cursor:pointer; padding-left: 15px;" onclick="openNav()">&#9776; open</span></font>
+	<div class="text">
+		<h1 style="font-size: 6vh; font-family: 'Dancing Script', cursive; color: white; text-shadow: 4px 4px 4px red;">
+		&hearts; Love Is A Promise; Love Is A Souvenir. Once Given Never Forgotten, Never Let It Disappear &hearts; - John Lennon </h1>
+	</div>
+</div>
+	<nav>	
+		<ul class="categorieslist">
+			<li class="categories-item"><a class="categorieslink" href="fantasy.html">Fantasy</a></li>
+			<li class="categories-item"><a class="categorieslink" href="sciencefiction.html">Science Fiction</a></li>
+			<li class="categories-item"><a class="categorieslink" href="crime-thriller-mystery.html">Crime, Thriller and Mystery</a></li>
+			<li class="categories-item"><a class="categorieslink" href="romance.html">Romance</a></li>
+			<li class="categories-item"><a class="categorieslink" href="classics.html">Classics</a></li>
+			<li class="categories-item"><a class="categorieslink" href="nonfic.html">Non-Fiction</a></li>
+			<li class="categories-item"><a class="categorieslink" href="Horror&Paranormal.html">Horror and Paranormal</a></li>
+		</ul>
+	</nav>
+
+<br><br>
+<br><br>
+
+
+<img id="image1" class = "image" src="images/TheLastSong.jpg" 
+alt="Seventeen year-old Veronica “Ronnie” Miller’s life was turned upside-down when her parents divorced and her father moved from New York City to Wilmington, North Carolina. 
+	 Three years later, she remains angry and alienated from her parents, especially her father… until her mother decides it would be in everyone’s best interest if she spent the summer in Wilmington with him.
+	 Ronnie’s father, a former concert pianist and teacher, is living a quiet life in the beach town, immersed in creating a work of art that will become the centerpiece of a local church. 
+	 The tale that unfolds is an unforgettable story about love in its myriad forms – first love, the love between parents and children – that demonstrates, as only a Nicholas Sparks novel can, the many ways that deeply felt relationships can break our hearts… and heal them.'
+	<br><br>
+	<p>Price: RM32.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image2" class = "image" src="images/TB.jpg" 
+alt="Jeremy Marsh is the ultimate New Yorker: handsome, almost always dressed in black, and part of the media elite.
+	 An expert on debunking the supernatural with a regular column in 'Scientific American', he's just made his first appearance on national TV. 
+	 When he receives a letter from the tiny town of Boone Creek, North Carolina, about ghostly lights that appear in a legend-shrouded cemetery, he can't resist driving down to investigate.
+	 Here, in this tightly knit community, Lexie Darnell runs the town's library, just as her mother did before the accident that left Lexie an orphan. 
+	 Disappointed by past relationships, including one that lured her away from home, she is sure of one thing: her future is in Boone Creek, close to her grandmother and all the other people she loves. 
+	 Jeremy expects to spend a quick week in 'the sticks' before speeding back to the city. 
+	 But from the moment he sets eyes on Lexie, he is intrigued and attracted to this beautiful woman who speaks with a soft drawl and confounding honesty. 
+	 And Lexie, while hesitating to trust this outsider, finds herself thinking of Jeremy more than she cares to admit.
+	 Now, if they are to be together, Jeremy Marsh must make a difficult choice: return to the life he knows, or do something he's never done before--take a giant leap of faith. 
+	 A story about taking chances and following your heart, True Believer will make you, too, believe in the miracle of love.'
+	<br><br>
+	<p>Price: RM35.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image3" class = "image" src="images/DearJohn.jpg" 
+alt="An angry rebel, John dropped out of school and enlisted in the Army, not knowing what else to do with his life--until he meets the girl of his dreams, Savannah. 
+	 Their mutual attraction quickly grows into the kind of love that leaves Savannah waiting for John to finish his tour of duty, and John wanting to settle down with the woman who has captured his heart.
+	 But 9/11 changes everything. John feels it is his duty to re-enlist. 
+	 And sadly, the long separation finds Savannah falling in love with someone else.
+	 Dear John, the letter read... and with those two words, a heart was broken and two lives were changed forever. 
+	 Returning home, John must come to grips with the fact that Savannah, now married, is still his true love—and face the hardest decision of his life.'
+	<br><br>
+	<p>Price: RM28.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image4" class = "image" src="images/TheRescue.jpg" 
+alt="When confronted by raging fires or deadly accidents, volunteer fireman Taylor McAden feels compelled to take terrifying risks - risks no one else in the department would ever take - to save lives.
+	 But there is one leap of faith Taylor can't bring himself to make: He can't fall in love.
+	 For all his adult years, Taylor has sought out women who need to be rescued, women he leaves as soon as their crisis is over, as soon as the relationship starts to become truly intimate.
+	 Then, one day, a raging, record-breaking storm hits his small Southern town.
+	 Denise Holton, a young single mother, is driving through it when her car skids off the road. 
+	 With her is her four-year-old son, Kyle, a boy with severe learning disabilities and for whom she has sacrificed everything. 
+	 Unconscious and bleeding, she-but not Kyle-will be found by Taylor McAden. 
+	 And when she wakes, the chilling truth becomes clear to both of them: Kyle is gone.
+	 During the search for Kyle, the connection, the lifeline, between Taylor and Denise takes root. 
+	 Taylor doesn't know that this rescue will be different from all the others, demanding far more than raw physical courage. 
+	 That it will lead him to the possibility of his own rescue from a life lived without love. 
+	 That it will require him to open doors to his past that were slammed shut by pain. 
+	 That it will dare him to live life to the fullest by daring to love.
+	 In The Rescue Nicholas Sparks weaves his inimitable spell, immersing us in the passions and the surprising complexities of modern relationships-and in doing so, teaching us something about our own.'
+	<br><br>
+	<p>Price: RM38.85</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image5" class = "image" src="images/FirstLove.jpg" 
+alt="An extraordinary portrait of true love that will move anyone who has a first love story of their own. 
+	 Axi Moore is a 'good girl': She studies hard, stays out of the spotlight, and doesn't tell anyone how all she really wants is to run away from it all.
+	 The only person she can tell is her best friend, Robinson--who she also happens to be madly in love with.
+	 When Axi spontaneously invites Robinson to come with her on an impulsive cross-country road trip, she breaks the rules for the first time in her life.
+	 But the adventure quickly turns from carefree to out of control after the teens find themselves on the run from the police.
+	 And when Robinson suddenly collapses, Axi has to face the truth that this trip might be his last.
+	 A remarkably moving tale very personal to James Patterson's own past, FIRST LOVE is testament to the power of first love--and how it can change the rest of your life.'
+	<br><br>
+	<p>Price: RM29.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image6" class = "image" src="images/Bend.jpg" 
+alt="Miles Ryan's life seemed to end the day his wife was killed in a hit-and-run accident two years ago.
+	 Missy had been his first love, and Miles fervently believes she will be his last. 
+	 As a deputy in the North Carolina town of New Bern, Miles Ryan not only grieves for Missy, but also longs to bring the unknown driver to justice. 
+	 Then Miles meets Sarah Andrews. The second grade teacher of his son, Jonah, Sarah had left Baltimore after a difficult divorce to start over in the gentler surroundings of New Bern. 
+	 Perhaps it's her own emotional wounds that make her sensitive to the hurt she first sees in Jonah's eyes, and then his father's. 
+	 Tentatively, Sarah and Miles reach out to each other. Soon they are both laughing for the first time in years . . . and falling in love.
+	 Neither will be able to guess how closely linked they are to a shocking secret -- one that will force them to question everything they ever believed in . . . and make a heartbreaking choice that will change their lives forever.'
+	<br><br>
+	<p>Price: RM45.65</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image7" class = "image" src="images/LoveStory.jpg" 
+alt="Oliver Barrett IV, a wealthy jock from a stuffy WASP family on his way to a Harvard degree and a career in law . . . Jenny Cavilleri, a sharp-tongued, working-class beauty studying music at Radcliffe . . .
+	 Opposites in nearly every way, Oliver and Jenny are kindred spirits from vastly different worlds. Falling deeply and powerfully, their attraction to one another defies everything they have ever believed—as they share a passion far greater than anything they dreamed possible . . . and explore the wonder of a love that must end too soon.
+	 One of the most adored novels of our time, this is the book that defined a generation—a story of uncompromising devotion, of life as it really is . . . and love that changes everything. '
+	<br><br>
+	<p>Price: RM48.00</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image8" class="image" src="images/TheLuckyOne.jpg" 
+alt="When U.S. Marine Logan Thibault finds a photograph of a smiling young woman half-buried in the dirt during his third tour of duty in Iraq, his first instinct is to toss it aside. 
+	 Instead, he brings it back to the base for someone to claim, but when no one does, he finds himself always carrying the photo in his pocket.
+	 Soon Thibault experiences a sudden streak of luck—winning poker games and even surviving deadly combat that kills two of his closest buddies. 
+	 Only his best friend, Victor, seems to have an explanation for his good fortune: the photograph—his lucky charm.
+	 Back home in Colorado, Thibault can’t seem to get the photo—and the woman in it—out of his mind. Believing that she somehow holds the key to his destiny, he sets out on a journey across the country to find her, never expecting the strong but vulnerable woman he encounters in Hampton, North Carolina—Elizabeth, a divorced mother with a young son—to be the girl he’s been waiting his whole life to meet. 
+	 Caught off guard by the attraction he feels, Thibault keeps the story of the photo, and his luck, a secret. 
+	 As he and Elizabeth embark upon a passionate and all-consuming love affair, the secret he is keeping will soon threaten to tear them apart—destroying not only their love, but also their lives.
+	 Filled with tender romance and terrific suspense, The Lucky One is Nicholas Sparks at his best—an unforgettable story about the surprising paths our lives often take and the power of fate to guide us to true and everlasting love.'
+	<br><br>
+	<p>Price: RM39.85</p>"
+width = "250" height = "450">
+	
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image9" class="image" src="images/safeHaven.jpg" 
+alt="Love hurts. There is nothing as painful as heartbreak. 
+	 But in order to learn to love again, you must learn to trust again.
+	 When a mysterious young woman named Katie appears in the small North Carolina town of Southport, her sudden arrival raises questions about her past.
+	 Beautiful yet self-effacing, Katie seems determined to avoid forming personal ties until a series of events draws her into two reluctant relationships: one with Alex, a widowed store owner with a kind heart and two young children; and another with her plainspoken single neighbor, Jo. 
+	 Despite her reservations, Katie slowly begins to let down her guard, putting down roots in the close-knit community and becoming increasingly attached to Alex and his family.
+	 But even as Katie begins to fall in love, she struggles with the dark secret that still haunts and terrifies her . . . a past that set her on a fearful, shattering journey across the country, to the sheltered oasis of Southport. 
+	 With Jo’s empathic and stubborn support, Katie eventually realizes that she must choose between a life of transient safety and one of riskier rewards . . . and that in the darkest hour, love is the only true safe haven.'
+	<br><br>
+	<p>Price: RM46.30</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+	
+<img id="image10" class = "image" src="images/MsgInABottle.jpg" 
+alt="Thrown to the waves, and to fate, the bottle could have ended up anywhere.
+	 Instead, it is found just three weeks after it begins its journey. 
+	 Theresa Osborne, divorced and the mother of a twelve-year-old son, picks it up during a seaside vacation from her job as a Boston newspaper columnist. 
+	 Inside is a letter that opens with:
+	 My Dearest Catherine, I miss you my darling, as I always do, but today is particularly hard because the ocean has been singing to me, and the song is that of our life together...
+	 For 'Garrett', the man who signs the letter, the message is the only way he knows to express his undying love for a woman he has lost.
+	 For Theresa, wary of romance since her husband shattered her trust, the message raises questions that intrigue her. 
+	 Who are Garrett and Catherine? Where is he now? What is his story?
+	 Challenged by the mystery, and pulled to find Garrett by emotions she does not fully understand, Theresa begins a search that takes her to a sunlit coastal town and an unexpected confrontation.
+	 Brought together by chance-or something more powerful-Theresa and Garrett are people whose lives are about to touch for a purpose, in a tale that resonates with our deepest hopes for finding that special someone and everlasting love.
+	 Shimmering with suspense and emotional intensity, Message in a Bottle takes readers on a hunt for the truth about a man and his memories, and about both the heartbreaking fragility and enormous strength of love. For those who cherished The Notebook and readers waiting to discover the magic of Nicholas Sparks's storytelling, here is his new, achingly lovely novel of happenstance, desire, and the choices that matter most...'
+	<br><br>
+	<p>Price: RM33.99</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image11" class = "image" src="images/LongestRide.jpg" 
+alt="Ira Levinson is in trouble. At ninety-one years old, in poor health and alone in the world, he finds himself stranded on an isolated embankment after a car crash. 
+	 Suffering multiple injuries, he struggles to retain consciousness until a blurry image materializes and comes into focus beside him: his beloved wife Ruth, who passed away nine years ago. 
+	 Urging him to hang on, she forces him to remain alert by recounting the stories of their lifetime together – how they met, the precious paintings they collected together, the dark days of WWII and its effect on them and their families.
+	 Ira knows that Ruth can’t possibly be in the car with him, but he clings to her words and his memories, reliving the sorrows and everyday joys that defined their marriage.
+	 A few miles away, at a local rodeo, a Wake Forest College senior’s life is about to change. Recovering from a recent break-up, Sophia Danko meets a young cowboy named Luke, who bears little resemblance to the privileged frat boys she has encountered at school.
+	 Through Luke, Sophia is introduced to a world in which the stakes of survival and success, ruin and reward -- even life and death – loom large in everyday life.
+	 As she and Luke fall in love, Sophia finds herself imagining a future far removed from her plans -- a future that Luke has the power to rewrite . . . if the secret he’s keeping doesn’t destroy it first.
+	 Ira and Ruth. Sophia and Luke. 
+	 Two couples who have little in common, and who are separated by years and experience. 
+	 Yet their lives will converge with unexpected poignancy, reminding us all that even the most difficult decisions can yield extraordinary journeys: beyond despair, beyond death, to the farthest reaches of the human heart.'
+	<br><br>
+	<p>Price: RM40.85</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image12" class = "image" src="images/rmb.jpg" 
+alt="Every April, when the wind blows from the sea and mingles with the scent of lilacs, Landon Carter remembers his last year at Beaufort High. It was 1958, and Landon had already dated a girl or two.
+	 He even swore that he had once been in love. 
+	 Certainly the last person in town he thought he'd fall for was Jamie Sullivan, the daughter of the town's Baptist minister.
+	 A quiet girl who always carried a Bible with her schoolbooks, Jamie seemed content living in a world apart from the other teens. 
+	 She took care of her widowed father, rescued hurt animals, and helped out at the local orphanage. 
+	 No boy had ever asked her out. Landon would never have dreamed of it.
+	 Then a twist of fate made Jamie his partner for the homecoming dance, and Landon Carter's life would never be the same. 
+	 Being with Jamie would show him the depths of the human heart and lead him to a decision so stunning it would send him irrevocably on the road to manhood...'
+	<br><br>
+	<p>Price: RM28.40</p>"
+width = "250px" height="450px">
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image13" class = "image" src="images/theGuardian.jpg" 
+alt="Julie Barenson's young husband left her two unexpected gifts before he died: a Great Dane puppy named Singer and the promise that he would always be watching over her. 
+	 Now, four years have passed. Still living in the small town of Swansboro, North Carolina, 29-year-old Julie is emotionally ready to make a commitment to someone again. 
+	 But who? Should it be Richard Franklin, the handsome, sophisticated engineer who treats her like a queen? Or Mike Harris, the down-to-earth nice guy who was her husband's best friend? 
+	 Choosing one of them should bring her more happiness than she's had in years.
+	 Instead, Julie is soon fighting for her life in a nightmare spawned by a chilling deception and jealousy so poisonous that it has become a murderous desire'
+	<br><br>
+	<p>Price: RM50.20</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image14" class = "image" src="images/theWedding.jpg" 
+alt="After thirty years of marriage, Wilson Lewis, son-in-law of Allie and Noah Calhoun (of The Notebook), is forced to admit that the romance has gone out of his marriage. 
+	 Desperate to win back his wife, Jane's, heart, he must figure out how to make her fall in love with him... again. Despite the shining example of Allie and Noah's marriage, Wilson is himself a man unable to easily express his emotions.
+	 A successful estate attorney, he has provided well for his family, but now, with his daughter's upcoming wedding, he is forced to face the fact that he and Jane have grown apart and he wonders if she even loves him anymore. 
+	 Wilson is sure of one thing--his love for his wife has only deepened and intensified over the years. 
+	 Now, with the memories of his in-laws' magnificent fifty-year love affair as his guide, Wilson struggles to find his way back into the heart of the woman he adores.'
+	<br><br>
+	<p>Price: RM31.45</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+
+<img id="image15" class = "image" src="images/51wDea4g1AL.jpg" 
+alt="Jennifer Collins is finally beginning to heal after losing her mother to cancer.
+	 It’s been a long road with scary turns, but her best friend Beth helped her through the darkest moments.
+	 But now Beth has gone and gotten herself hitched, and Jen can’t help but feel like she’s all alone once again.
+	 When Hunter Wright comes strolling back into town after leaving her behind without so much as a see ya later when she needed him the most, Jen suddenly realizes she isn’t as over him as she thought she was. 
+	 And perhaps she never would be.
+	 But things are complicated now, and Jen has a secret that makes it impossible for her to throw caution to the wind and fall back into the arms of the man who broke her heart. 
+	 Sometimes, a new beginning, a new life, and a new outlook can mean so much more than understanding and forgiveness. 
+	 Sometimes it can mean putting faith in someone who has the ability to hurt you or the ability to make you whole. 
+	 Jen knows more than anyone that love can be such a… Perfect Contradiction.'
+	<br><br>
+	<p>Price: RM43.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image16" class = "image" src="images/S&S.jpg" 
+alt="Freedom—that is what Lilly Linton wants most in life. 
+	 Not marriage, not a brood of squalling brats, and certainly not love, thank you very much!
+	 But freedom is a rare commodity in 19th-century London, where girls are expected to spend their lives sitting at home, fully occupied with looking pretty. Lilly is at her wits’ end—until a chance encounter with a dark, dangerous and powerful stranger changes her life forever...
+	 Enter the world of Mr Rikkard Ambrose, where the only rule is: Knowledge is power is time is money!'
+	<br><br>
+	<p>Price: RM29.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image17" class = "image" src="images/notebook.jpg" 
+alt="A man with a faded, well-worn notebook open in his lap.
+	 A woman experiencing a morning ritual she doesn't understand. 
+	 Until he begins to read to her. An achingly tender story about the enduring power of love.
+	 A man with a faded, well-worn notebook open in his lap.
+	 A woman experiencing a morning ritual she doesn't understand.
+	 Until he begins to read to her. 
+	 The Notebook is an achingly tender story about the enduring power of love, a story of miracles that will stay with you forever.
+	 Set amid the austere beauty of coastal North Carolina in 1946, The Notebook begins with the story of Noah Calhoun, a rural Southerner returned home from World War II. 
+	 Noah, thirty-one, is restoring a plantation home to its former glory, and he is haunted by images of the beautiful girl he met fourteen years earlier, a girl he loved like no other. 
+	 Unable to find her, yet unwilling to forget the summer they spent together, Noah is content to live with only memories...until she unexpectedly returns to his town to see him once again.
+	 Allie Nelson, twenty-nine, is now engaged to another man, but realizes that the original passion she felt for Noah has not dimmed with the passage of time. 
+	 Still, the obstacles that once ended their previous relationship remain, and the gulf between their worlds is too vast to ignore.
+	 With her impending marriage only weeks away, Allie is forced to confront her hopes and dreams for the future, a future that only she can shape.
+	 Like a puzzle within a puzzle, the story of Noah and Allie is just the beginning. 
+	 As it unfolds, their tale miraculously becomes something different, with much higher stakes.
+	 The result is a deeply moving portrait of love itself, the tender moments and the fundamental changes that affect us all. 
+	 Shining with a beauty that is rarely found in current literature, The Notebook establishes Nicholas Sparks as a classic storyteller with a unique insight into the only emotion that really matters.
+	 'I am nothing special, of this I am sure. I am a common man with common thoughts and I've led a common life.
+	 There are no monuments dedicated to me and my name will soon be forgotten, but I've loved another with all my heart and soul, and to me, this has always been enough.'
+	 And so begins one of the most poignant and compelling love stories you will ever read...The Notebook'
+	<br><br>
+	<p>Price: RM57.20</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image18" class = "image" src="images/LoveUnrehearsed.jpg" 
+alt="When A-list film actor Ryan Christensen ducked into her pub to escape his screaming fans, never in a million years did Taryn Mitchell think her life was about to change forever. But now, eight months later, after a whirlwind romance, Taryn wakes up in Ryan’s Hollywood hotel room to find a diamond to die for on her left ring finger—and her face splashed across the cover of every gossip magazine.
+	 Ryan’s very public proposal is catnip to the tabloids, his management team is worried, and Taryn must figure out how a small town girl like her fits into his glittering world. What does it take to make a relationship work amidst telephoto lenses, daily on-set temptations, and jealous fans who will stop at nothing to keep you from walking down the aisle with the man of your dreams?
+	 With no script to follow and no chance for a dress rehearsal, Taryn and Ryan will be forced to take the plunge and risk everything to make their love last. '
+	<br><br>
+	<p>Price: RM37.75</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+
+<img id="image19" class = "image" src="images/a-man-to-call-my-own.jpg" 
+alt="After the sudden death of their father, Marian and Amanda Laton must leave their New England home and travel to their aunt's Texas ranch. 
+	 It is a harrowing journey, but plain-looking Marian welcomes the challenge of their adventure, while beautiful Amanda complains at every turn. 
+	 And when they need rescuing, cowboy Chad Kinkaid is the strong, sexy hero for the job. 
+	 Amanda's beauty catches Chad's eye, but it is Marian's daring spirit and hidden passion that spark his desire for her -a sensual attraction that lands them in a romantic entanglement Marian is not prepare to handle.
+	 Tied to him by the fate of her aunt's ranch, Marian must face a proud cowboy who's determined to convince her - whether it means wooing her under the stars of the open range or following her back East- that she's the only woman for him...'
+	<br><br>
+	<p>Price: RM43.99</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+
+<img id="image20" class = "image" src="images/BadBoyRockStar.jpg" 
+alt="Hannah Sorrento never planned to be a band manager.
+	 She’s a princess and the toughest obstacle she's had in life is finding shoes to match her outfit.
+	 Then her father disappears leaves her with only the money in her purse and a management contract for hot, indie band, STORM. 
+	 She plans to sell the contract, one way or another, then pack up her designer wardrobe and head back to law school.
+	 But lead singer, Jack Colt, has other ideas. She's never met a man like him before. 
+	 His raw sexuality is messing with her head and her heart... and a lot of other body parts.
+	 With the help of crazy rock chick, Angie, Hannah sets the band on their first steps to the big time and learns to survive on her own.
+	 But this isn’t some game - soon the threat that Hannah fears most becomes reality.
+	 Jack Colt - he’s arrogant and infuriating but he’s the one that’s there for Hannah when her world comes crashing down.
+	 With secrets of his own, will Jack Colt save Hannah or destroy her?'
+	<br><br>
+	<p>Price: RM37.50</p>"
+width = "250px" height="450px">	
+
+<div id="myModal" class="modal">
+	<span class="close">&times;</span>
+	<img class="modal-content" id="image">
+	<div id="caption"></div>
+</div>
+
+<br><br>
+
+<hr>
+<footer id = "footer">
+Copyright &copy; 2017 Lost In Pages
+<br>
+<b>Disclaimer: </b> Materials such as images, audio, videos and book synopses on this website do not belong to <i> Lost In Pages </i>
+<br>
+These materials are obtained from the internet for assignment purpose only.
+</footer>
+
+</div>
+
+<br>
+
+<div id = "music">
+<audio autoplay>
+	<source src = "audio/The Best Of YIRUMAYiruma's Greatest HitsBest Piano.mp3" type = "audio/mpeg">
+	<p> If you can read this, it means that your browser does not support the audio element. </p>
+</audio>
+<div>
+
+</body>
+
+<script>
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("box").style.width = "250px";
+	document.getElementById("main").style.width = "250px";
+	document.getElementById("section").style.width = "250px";
+	document.getElementById("offer").style.width = "250px";
+    document.getElementById("books").style.marginLeft = "500px";
+    document.getElementById("footer").style.marginLeft = "250px"; }
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("box").style.marginLeft= "0";
+	document.getElementById("main").style.width = "250px";
+    document.getElementById("section").style.marginLeft= "0";
+    document.getElementById("offer").style.marginLeft= "0";
+    document.getElementById("books").style.marginLeft= "0";
+    document.getElementById("footer").style.marginLeft= "0"; }
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal by using its "alt" as a caption
+var modalImg = document.getElementById("image");
+var captionText = document.getElementById("caption");
+
+var img1 = document.getElementById('image1')
+img1.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img2 = document.getElementById('image2')
+img2.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+
+var img3 = document.getElementById('image3')
+img3.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+
+var img4 = document.getElementById('image4')
+img4.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img5 = document.getElementById('image5')
+img5.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img6 = document.getElementById('image6')
+img6.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img7 = document.getElementById('image7')
+img7.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img8 = document.getElementById('image8')
+img8.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img9 = document.getElementById('image9')
+img9.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img10 = document.getElementById('image10')
+img10.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img11 = document.getElementById('image11')
+img11.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img12 = document.getElementById('image12')
+img12.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img13 = document.getElementById('image13')
+img13.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img14 = document.getElementById('image14')
+img14.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img15 = document.getElementById('image15')
+img15.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img16 = document.getElementById('image16')
+img16.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img17 = document.getElementById('image17')
+img17.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img18 = document.getElementById('image18')
+img18.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img19 = document.getElementById('image19')
+img19.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+var img20 = document.getElementById('image20')
+img20.onclick = function(){ modal.style.display = "block";
+						  modalImg.src = this.src;
+						  captionText.innerHTML = this.alt; }
+						  
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { modal.style.display = "none"; }
+
+</script>
+
+</html>

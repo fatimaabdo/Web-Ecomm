@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<title>Lost In Pages</title>
+<link href = "https://fonts.googleapis.com/css?family=Philosopher|Special+Elite" rel = "stylesheet">
+<meta charset = "utf-8">
+
+<style>
+
+body { height: 100%;
+	   margin: 0; 
+	   font-family: 'Philosopher', sans-serif; }
+	   
+ul { position: fixed;
+     top: 0;
+     width: 100%; }
+
+.sidenav { height: 100%;
+           width: 0;
+		   position: fixed;
+		   z-index: 1;
+		   top: 0;
+		   left: 0;
+		   background-color: black;
+		   overflow-x: hidden;
+		   transition: 0.5s;
+		   padding-top: 60px; }
+
+.sidenav a { padding: 8px 8px 8px 32px;
+		     text-decoration: NONE;
+             font-size: 30px;
+		     color: LightSlateGray;
+		     display: block;
+			 transition: 0.3s; }
+
+.sidenav a:hover, a:focus{ color: #f1f1f1;
+						   font-size: 220%; }
+
+.sidenav .closebtn { position: absolute;
+				     top: 0;
+					 right: 25px;
+					 font-size: 40px;
+					 margin-left: 50px; }
+					 
+.cover { bachground-image: url("images/welcome.jpg");
+		 min-height: 850px;
+		 background-size: cover;
+		 position: relative; 
+		 background-attachment: fixed;}	
+					 
+
+.text { text-align: center;
+		position: absolute;
+		left: 50%;
+		padding-top: 40px;
+		padding-bottom: 100px;;
+		transform: translate(-50%, -50%);
+		color: white; }
+	
+					 
+#main { transition: margin-left .5s;
+        padding: 16px; }
+		
+.box1 { transition: margin-left .5s;
+	    border: 3px solid #000000;
+	    width: 250px;
+	    height: 100px;
+	    padding: 10px;
+		align: 10px;
+	    margin: 10px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	    text-align: center; 
+		margin-left: 35px;}
+		
+.box2 { transition: margin-left .5s;
+	    border: 3px solid #000000;
+	    width: 250px;
+	    height: 395px;
+	    padding: 10px;
+	    margin: 10px;
+		margin-bottom: 30px;
+	    text-align: center;
+	    margin-left: 35px;}
+		
+.box3 { transition: margin-left .5s;
+	    border: 3px solid #000000;
+	    width: 250px;
+	    height: 290px;
+	    padding: 10px;
+	    margin: 10px;
+		margin-bottom: 30px;
+	    text-align: center; 
+		margin-left: 35px; }
+		
+.section{ transition: margin-left .5s;
+		  padding: 5px; }
+		
+.offer{ transition: margin-left .5s;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 1.60em; }
+
+.box{
+float: left;
+width: 20%:}		
+		
+#books{ transition: margin-left .8s;
+	    margin: 5px;
+	    display: inline-block;
+	    padding-bottom: 20px;
+		float: right;
+		width: 70%;}
+		
+#footer { transition: margin-left .5s;
+		  width: 100%;
+		  text-align: center;
+		  font-size: 1em; }
+		  
+#books img{ width: 150px;
+			height: 240px;
+			padding-right: 30px; 
+			padding-top: 20px; }
+	
+.clear{
+clear: both;}
+		 
+@media screen and (max-height: 450px) { .sidenav {padding-top: 15px;}
+										.sidenav a {font-size: 18px;} }	 
+		 
+</style>
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p style = 'font-family: Special Elite; color: white; font-size: 20pt; padding: 8px 8px 8px 32px;'> Lost In Pages </p>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="book.html">Books</a>
+  <a href="orderform.html">Order Form</a>
+  <a href="contact.html">Contacts</a>
+  <a href="login&registration.html">Login</a>
+</div>
+
+<div id="main">
+	<div id = "cover">
+		<font face=Algerian, Forte>
+		<br>
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span></font>
+			<div class="text">
+			<br><br><br>
+				<h1 style = 'font-family: Special Elite; color: Black; font-size: 50pt; padding: 8px 8px 8px 32px; text-align: center;'> Lost In Pages </h1>
+			</div>
+	</div>
+
+<br><br>
+
+<h2 style = "background-color: #b4b4b4;">Featured</h2><br>
+
+<div class="box">
+<div class = "box1"> 
+	<div class = "section">
+		<p style = "font-family: sans-serif; font-size: 50px text-align: center margin-top: 10px">Promotions<br>
+		<span class = "offer">Buy 2, Get 1 Free</span></p>
+	</div>
+</div>
+
+<div class = "box2">
+	<div class = "section">
+		<a href = "book.html"><img src = "images/books-that-matter-book-review.png" alt = "Most Anticipated Books" width = "240" height = "280"></a>
+		<caption><h2>Press this image will link you to more books </h2></caption><br>
+	</div>	
+</div>
+
+<div class = "box3">
+	<div class = "section">
+	<img src = "images/2d0a7f119819e5f15a6aa451549e3b09.jpg" alt = "The more that you READ, the more things you will KNOW. The more that you LEARN, the more places you'll GO! - Dr. Sevss" width = "240" height = "280">
+	</div>
+</div>
+</div>
+
+<fieldset id = "books"><legend><h2 style = "font-family: serif;">Recommended Books</h2></legend>	
+	<img src = "images/imperfect.jpg" alt = "My Not So Perfect Life">
+	<img src = "images/expelled.jpg" alt = "Expelled">
+	<img src = "images/27_HOURS_TRISTINA.jpg" alt = "27 Hours">
+	<img src = "images/deepfreeze.jpg" alt = "Deep Freeze">
+	<img src = "images/dog.jpg" alt = "A Dog's Purpose">
+	<img src = "images/the-empress-9781534413559_lg.jpg" alt = "The Empress">
+	<img src = "images/the-last-ballad-book-cover.jpg" alt = "The Last Ballad">
+	<img src = "images/haunted.jpg" alt = "Haunted">
+	<img src = "images/GrantRonChernow.jpg" alt = "Grant">
+	<img src = "images/nomiddlename.JPG" alt = "No Middle Name">
+	<img src = "images/Two-Kinds-of-Truth-by-Michael-Connelly.jpg" alt = "Two Kinds Of Truth">
+	<img src = "images/lastStarBurning.jpg" alt = "Last Star Burning">
+	<img src = "images/magnuschase.jpg" alt = "Magnus Chase And The Ship Of The Dead">
+    <img src = "images/dontletgo.jpg" alt = "Don't Let Go">
+	<img src = "images/images.jpg" alt = "Music Of The Ghosts">
+	<img src = "images/DanBrownOrigin.jpg" alt = "Origin">
+	<img src = "images/rooster_bar_final2.jpg" alt = "The Rooster Bar">
+	<img src = "images/harrypotter.jpg" alt = "Harry Potter And The Deathly Hallows">	
+	<img src = "images/sleepingbeauties.jpg" alt = "Sleeping Beauties">
+	<img src = "images/Her-Body-Other-Parties.jpg" alt = "Her Body And Other Parties">
+	<img src = "images/fantasticbeasts.jpg" alt = "Fantastic Beasts And Where To Find Them">
+</fieldset>
+
+<div class="clear"></div>
+
+<br><br>
+
+<hr>
+<footer id = "footer">
+Copyright &copy; 2017 Lost In Pages
+<br>
+<b>Disclaimer: </b> Materials such as images, audio, videos and book synopses on this website do not belong to <i> Lost In Pages </i>
+<br>
+These materials are obtained from the internet for assignment purpose only.
+</footer>
+
+</div>
+</body>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+	document.getElementById("box").style.width = "250px";
+	document.getElementById("section").style.width = "250px";
+	document.getElementById("offer").style.width = "250px";
+    document.getElementById("books").style.marginLeft = "500px";
+    document.getElementById("footer").style.marginLeft = "250px"; }
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("box").style.marginLeft= "0";
+    document.getElementById("section").style.marginLeft= "0";
+    document.getElementById("offer").style.marginLeft= "0";
+    document.getElementById("books").style.marginLeft= "0";
+    document.getElementById("footer").style.marginLeft= "0"; }
+</script>
+     
+</html>
