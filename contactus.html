@@ -41,6 +41,7 @@
         .submission-form{
             font-family:'Courier New', Courier, monospace;
             max-width: 500px;
+            margin-top: 100px;
             margin-left: 20px;
             
         }
@@ -80,11 +81,10 @@
             text-align: center;
             table-layout:fixed;
             padding: 8px;
-            
-           
+      
             
         }
-        img{
+        .img{
             margin-left: -4em;
         }
     </style>
@@ -103,9 +103,9 @@
                 <li><a href="faq.html">FAQ</a></li>
                 </ul>
         </div>
-                  <div class="text">
-                    <h1> Bookie Store </h1>
-                </div> 
+        <div>
+            <img src="images/Bookie logo.png" width="100px" height="90px">
+        </div> 
         <form class="submission-form">
                 <fieldset>
                     <legend>Contact us</legend>
@@ -130,47 +130,29 @@
                             <textarea id="Message" name="user_message" ></textarea>
                         </div>
                         <div>
-                            <button type="submit" id="sendButton" onclick=" return validation()" >Send</button>
+                            <button type="submit" id="sendButton">Send</button>
                         </div>
                         
         </form>
         </fieldset>
         <table>
                 <tr>
-                    <td><img src="images/email.png" alt="email icon" width="30" height="30"></td>
+                    <td><img src="images/email.png" alt="email icon" width="30" height="30" class="img"></td>
                     <td width="60%">bookiestore@gmail.com</td>
                 </tr>
                 <tr>
-                    <th><img src="images/phone.png"alt="phone icon" width="30" height="30"></th>
+                    <th><img src="images/phone.png"alt="phone icon" width="30" height="30" class="img"></th>
                     <td>0182990000</td>
                 </tr>
                 <tr>
-                    <th><img src="images/instagram.png"alt="instagram icon" width="30" height="30"></th>
+                    <th><img src="images/instagram.png"alt="instagram icon" width="30" height="30" class="img"></th>
                     <td><a href="https://www.instagram.com/?hl=en" target="_top">bookiestore</a></td>
                 </tr>
                 <tr>
-                    <th><img src="images/facebook.png"alt="facebook icon" width="30" height="30"></th>
+                    <th><img src="images/facebook.png"alt="facebook icon" width="30" height="30" class="img"></th>
                     <td><a href="https://www.facebook.com/" target="_top">Bookie Store</a></td>
                 </tr>
-            <script>
-                function validation(){
-                    var firstname= document.getElementById('firstname');
-                    var lastname = document.getElementById('lastname');
-                    var email= document.getElementById('mail');
-                    var contact_number= document.getElementById('contact_number')
-                    var message= document.getElementById('message');
-            
-                    if(firstname.value.trim() =="" || lastname.value.trim() =="" || email.value.trim() ==""|| message.value.trim() ==""){
-                        alert("You can't leave it blank!");
-                        return false;
-                    }
-                    else{
-                        alert("Message sent successfully!");
-                        return true;
-                    
-                    }
-                }
-            </script>      
+                 
         
 
         <footer>
