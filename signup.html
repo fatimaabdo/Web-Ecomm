@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Sign up</title>
+    <style>
+        .main {margin:auto;
+           margin-right:10px;
+           font-size: 11pt;
+           font-family:'Courier New', Courier, monospace;
+        }
+        
+           body{background: url(images/background.jpg);
+		 background-size:cover;
+		 background-position:center;
+		 font-family:sans-serif;
+            }
+            .text {font-family: monospace; 
+		   color: black; 
+		   font-size: 25pt; 
+		   padding: 7px 7px 5px 10px; 
+		   text-align: left;
+		  
+	}
+        ul{list-style-type:none;
+            float: right;
+            margin-top: 25px;
+            margin-right: 15px;
+        }
+        ul li{display: inline-block;
+        }
+        ul li a{text-decoration: none;
+            background: white;
+                color: black;
+                padding: 5px 20px;
+                border: 1px solid black;
+                transition:0.6s ease;
+        }
+        ul li a:hover{background-color:black;
+                    color:white;
+        }
+        .submission-form{
+            font-family:'Courier New', Courier, monospace;
+            max-width: 500px;
+            margin:auto;
+        }
+        label{
+                display:block;
+            }
+        input, textarea{
+            display: block;
+            width: 100%;
+        }
+        #signupButton{
+            border:0;
+            background: white;
+            padding: 1rem;
+            color: black;
+            margin: 1rem 0 ;
+            width: auto;
+            text-transform: uppercase;
+            font-family:'Courier New', Courier, monospace
+        }
+        legend{
+            font-size: 30pt;
+            font-family:'Courier New', Courier, monospace
+        }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="rules&regulations.html">Terms of Use</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                </ul>
+        </div>
+                  <div class="text">
+                    <h1> Bookie Store </h1>
+                </div> 
+        <form class="submission-form">
+                <fieldset>
+                    <legend>Sign up</legend>
+                    <h3>Your Information</h3>
+                        <div >
+                            <label for="firstname">First name: </label>
+                            <input type="text" id="firstname" name="user_firstname" /><br>
+                        </div>
+                        <div >
+                            <label for="lastname">Last name: </label>
+                            <input type="text" id="lastname" name="user_lastname" /><br>
+                        </div>
+                        <div >
+                            <label for="lastname">Username: </label>
+                            <input type="text" id="username" name="user_username" /><br>
+                        </div>
+                        <div >
+                            <label for="mail">Email Address: </label>
+                            <input type = "email" id="mail" name="user_mail" /><br>
+                        </div>
+                        <div >
+                            <label for="password">Password: </label>
+                            <input type = "password" id="password" name="user_password" /><br>
+                        </div>
+
+                        <h3>Shipping Information</h3>
+                        <div >
+                            <label for="Address">Address: </label>
+                            <textarea id="Address" name="user_address" ></textarea><br>
+                        </div>
+                        <div >
+                            <label for="city">City: </label>
+                            <input type="text" id="city" name="user_city" /><br>
+                        </div>
+                        <div >
+                            <label for="zipcode">Zip code: </label>
+                            <input type="text" id="zipcode" name="user_zipcode" /><br>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" id="signupButton" onclick=" return validation()" >Sign Up</button>
+                        </div>
+                    
+        </form>
+        </fieldset>
+        <script>
+            function validation(){
+                var firstname= document.getElementById('firstname');
+                var lastname = document.getElementById('lastname');
+                var username = document.getElementById('username');
+                var email= document.getElementById('mail');
+                var password= document.getElementById('password');
+                var Address= document.getElementById('Address');
+                var city= document.getElementById('city');
+                var zipcode= document.getElementById('zipcode');
+        
+                if(firstname.value.trim() =="" || lastname.value.trim() =="" || username.value.trim() =="" ||email.value.trim() ==""||password.value.trim() ==""|| Address.value.trim() ==""|| city.value.trim() ==""|| zipcode.value.trim() ==""){
+                    alert("You can't leave it blank!");
+                    return false;
+                }
+                else{
+                    alert("Sign up successfully!");
+                    return true;
+                
+                }
+            }
+        </script> 
+        <footer>
+            Copyright &copy; 2019 BookieStore
+        </footer>
+    </body>
+    
+    </html>
+
+
+    

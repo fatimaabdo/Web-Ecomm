@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Contact us</title>
+    <style>
+        .main {margin:auto;
+           margin-right:10px;
+           font-size: 11pt;
+           font-family:'Courier New', Courier, monospace;
+        }
+        
+        body{background: url(images/background.jpg);
+		 background-size:cover;
+		 background-position:center;
+		 font-family:sans-serif;
+	    }
+            .text {font-family: monospace; 
+		   color: black; 
+		   font-size: 25pt; 
+		   padding: 7px 7px 5px 10px; 
+		   text-align: left;
+	        }
+        ul{list-style-type:none;
+            float: right;
+            margin-top: 25px;
+            margin-right: 15px;
+        }
+        ul li{display: inline-block;
+        }
+        ul li a{text-decoration: none;
+            background: transparent;
+                color: black;
+                padding: 5px 20px;
+                border: 1px solid black;
+                transition:0.6s ease;
+        }
+        ul li a:hover{background-color:black;
+                    color:white;
+        }
+        .submission-form{
+            font-family:'Courier New', Courier, monospace;
+            max-width: 500px;
+            margin-left: 20px;
+            
+        }
+        .ourInfo{
+            font-family:'Courier New', Courier, monospace;
+            max-width: 500px;
+            margin-right: 20px;
+        }
+        label{
+                display:block;
+            }
+        input, textarea{
+            display: block;
+            width: 100%;
+        }
+        #sendButton{
+            border:0;
+            background: white;
+            padding: 1rem;
+            color: black;
+            margin: 1rem 0 ;
+            width: auto;
+            text-transform: uppercase;
+            font-family:'Courier New', Courier, monospace
+        }
+        legend{
+            font-size: 30pt;
+            font-family:'Courier New', Courier, monospace
+        }
+        table{
+            width:300px;
+            height: 200px;
+            border:1px solid grey;
+            background-color: white;
+            margin-top: -25rem;
+            margin-left: 50rem;
+            text-align: center;
+            table-layout:fixed;
+            padding: 8px;
+            
+           
+            
+        }
+        img{
+            margin-left: -4em;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="main">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="book.html">Books</a></li>
+                <li><a href="bookings.html">Bookings</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="rules&regulations.html">Terms of Use</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                </ul>
+        </div>
+                  <div class="text">
+                    <h1> Bookie Store </h1>
+                </div> 
+        <form class="submission-form">
+                <fieldset>
+                    <legend>Contact us</legend>
+                        <div >
+                            <label for="firstname">First name: </label>
+                            <input type="text" id="firstname" name="user_firstname" /><br>
+                        </div>
+                        <div >
+                            <label for="lastname">Last name: </label>
+                            <input type="text" id="lastname" name="user_lastname" /><br>
+                        </div>
+                        <div >
+                            <label for="mail">Email Address: </label>
+                            <input type = "email" id="mail" name="user_mail" /><br>
+                        </div>
+                        <div>
+                            <label for="contact_number">Contact Number(optional):</label>
+                            <input type = "text" id="contact_number" name="user_number" /><br>
+                        </div>
+                        <div>
+                            <label for="Message">Message:</label>
+                            <textarea id="Message" name="user_message" ></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="sendButton" onclick=" return validation()" >Send</button>
+                        </div>
+                        
+        </form>
+        </fieldset>
+        <table>
+                <tr>
+                    <td><img src="images/email.png" alt="email icon" width="30" height="30"></td>
+                    <td width="60%">bookiestore@gmail.com</td>
+                </tr>
+                <tr>
+                    <th><img src="images/phone.png"alt="phone icon" width="30" height="30"></th>
+                    <td>0182990000</td>
+                </tr>
+                <tr>
+                    <th><img src="images/instagram.png"alt="instagram icon" width="30" height="30"></th>
+                    <td><a href="https://www.instagram.com/?hl=en" target="_top">bookiestore</a></td>
+                </tr>
+                <tr>
+                    <th><img src="images/facebook.png"alt="facebook icon" width="30" height="30"></th>
+                    <td><a href="https://www.facebook.com/" target="_top">Bookie Store</a></td>
+                </tr>
+            <script>
+                function validation(){
+                    var firstname= document.getElementById('firstname');
+                    var lastname = document.getElementById('lastname');
+                    var email= document.getElementById('mail');
+                    var contact_number= document.getElementById('contact_number')
+                    var message= document.getElementById('message');
+            
+                    if(firstname.value.trim() =="" || lastname.value.trim() =="" || email.value.trim() ==""|| message.value.trim() ==""){
+                        alert("You can't leave it blank!");
+                        return false;
+                    }
+                    else{
+                        alert("Message sent successfully!");
+                        return true;
+                    
+                    }
+                }
+            </script>      
+        
+
+        <footer>
+        Copyright &copy; 2019 BookieStore
+        </footer>
+    </body>
+    
+    </html>
+
+
+    
