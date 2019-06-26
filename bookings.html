@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+<head>
+	<title>Booking</title>
+<meta charset = "utf-8">
+<style>
+        body{background: url(images/background.jpg);
+             background-size:cover;
+             background-position:center;
+             font-family:sans-serif;
+        }
+        .main {margin:auto;
+		   margin-right:10px;
+		   font-family: fantasy ;
+        }
+        ul{list-style-type:none;
+		float: right;
+		margin-top: 25px;
+		margin-right: 15px;
+        }
+        ul li{display: inline-block;
+        }
+        ul li a{text-decoration: none;
+                color: black;
+                padding: 5px 20px;
+                border: 1px solid black;
+                transition:0.6s ease;
+        }
+        ul li a:hover{background-color:black;
+                    color:white;
+        }
+        .submit{
+		    height: 35px;
+		    width: 100px;
+		    font-size: 20px;
+            border-radius: 20px;
+            font-family:'Courier New', Courier, monospace;
+		    background-color: white;
+		    border: 1px solid ;
+		    color: black;
+		    
+	}
+	.submit:hover{cursor:pointer;
+			      background:#000;
+			      color:white;
+    }
+    label{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 25px;
+    }
+    select{
+        display: block;
+        margin: 10px 0;
+        padding: 5px 40px 10px 10px;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        border: 2px solid white;
+        width: 420px;
+       
+        font-size: 14pt;
+    }
+   
+    .logospace{
+        margin-bottom: 70px;
+    }
+</style>
+
+</head>
+<body>
+        <div class="main">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="book.html">Books</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="rules&regulations.html">Terms of Use</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+            </div>
+                  <div>
+                    <img src="images/Bookie logo.png" width="100px" height="90px" class="logospace">
+                </div>
+        <div class="box">
+            <label for="action">Action/Mystery</label>
+            <select name ="action" id="action" >
+                <option>The Secret Place</option>
+                <option>Before I Go to Sleep</option>
+                <option>Big Little Lies</option>
+                <option>Free Fall</option>
+                <option>Jane Steele</option>
+                <option>Gone Girl</option>
+                <option>Still Mine</option>
+                <option>The Dinner</option>
+                <option>The Cuckoo's Calling</option>
+                <option>The Suspect</option>
+            </select>
+        </div>
+        
+        <label for="fantasy">Fantasy</label>
+        <select name ="fantasy" id="fantasy" >
+            <option>Harry Potter and the Philosopher's Stone </option>
+            <option>Fantastic Beasts and Where to Find Them</option>
+            <option>A Game of Thrones</option>
+            <option>A Storm of Swords</option>
+            <option>The Hobbit</option>
+            <option>King's Dragon</option>
+            <option>A Clash of Kings</option>
+            <option>The Chronicles of Narnia</option>
+            <option>Glass Sword</option>
+            <option>Muse of Nightmares</option>
+        </select><br>
+
+        <label for="romance">Romance</label>
+        <select name ="romance" id="romance"  >
+            <option>Field Notes of Love</option>
+            <option>The DNA of Your and Me</option>
+            <option>Me Before You</option>
+            <option>The Notebook</option>
+            <option>This Man</option>
+            <option>Story of O</option>
+            <option>The Fault In Our Stars</option>
+            <option>Twilight</option>
+            <option>Act Like It</option>
+            <option>The Last Song</option>
+        </select><br>
+
+        <label for="children">Children</label>
+        <select name ="children" id="children">
+            <option>Where The Wild Things Are</option>
+            <option>The Very Hungry Caterpillar</option>
+            <option>Goodnight Moon</option>
+            <option>The BFG</option>
+            <option>Madeline</option>
+            <option>Guess How Much I Love You</option>
+            <option>Charlie and The Chocolate Factory</option>
+            <option>The Tale of Peter Rabbit</option>
+            <option>The Wonderful Things You Will Be</option>
+            <option>The Little Prince</option>
+        </select><br>
+
+        <label for="horror">Horror</label>
+        <select name ="horror" id="horror">
+            <option>The Hunger</option>
+            <option>The Missing Season</option>
+            <option>Cardinal Black</option>
+            <option>The Cabin at the End of the World</option>
+            <option>Unbury Carol</option>
+            <option>Sawkill Girls</option>
+            <option>Dread Nation</option>
+            <option>Pitch Dark</option>
+            <option>Sleeping Beauties</option>
+            <option>Ararat</option>
+        </select><br>
+
+        <label for="sci-fi">Sci-Fi</label>
+        <select name ="sci-fi" id="sci-fi">
+            <option>The Lord of the Rings</option>
+            <option>The Hitchhiker's Guide to the Galaxy</option>
+            <option>Ender's Game</option>
+            <option>Dune</option>
+            <option>1984</option>
+            <option>Brave New World</option>
+            <option>Animal Farm</option>
+            <option>The Calculating Stars</option>
+            <option>Ancestral Night</option>
+            <option>The Gone World</option>
+        </select><br>
+
+        <button type="submit" class="submit" >Submit!</button>
+    </form>
+</body>
+</html>
