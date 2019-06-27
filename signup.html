@@ -6,155 +6,160 @@
     <style>
         .main {margin:auto;
            margin-right:10px;
-           font-size: 11pt;
            font-family:'Courier New', Courier, monospace;
+           
         }
         
            body{background: url(images/background.jpg);
 		 background-size:cover;
 		 background-position:center;
 		 font-family:sans-serif;
-            }
-            .text {font-family: monospace; 
-		   color: black; 
-		   font-size: 25pt; 
-		   padding: 7px 7px 5px 10px; 
-		   text-align: left;
-		  
-	}
-    ul{list-style-type:none;
+            font-family: sans-serif;
+            background-color: black;
+            height:1000px;
+        }
+        ul{list-style-type:none;
 		float: right;
 		margin-top: 25px;
 		margin-right: 15px;
-	}
-	ul li{display: inline-block;
-	}
-	ul li a{text-decoration: none;
-		    color: black;
-		    padding: 5px 20px;
-		    border: 1px solid black;
-		    transition:0.6s ease;
-	}
-	ul li a:hover{background-color:black;
-		          color:white;}
-        .submission-form{
-            font-family:'Courier New', Courier, monospace;
-            max-width: 500px;
-            margin:auto;
         }
-        label{
-                display:block;
-            }
-        input, textarea{
-            display: block;
-            width: 100%;
+        ul li{display: inline-block;
         }
-        #signupButton{
-            border:0;
-            background: white;
-            padding: 1rem;
-            color: black;
-            margin: 1rem 0 ;
-            width: auto;
-            text-transform: uppercase;
-            font-family:'Courier New', Courier, monospace
+        ul li a{text-decoration: none;
+                color: black;
+                padding: 5px 20px;
+                border: 1px solid black;
+                transition:0.6s ease;
         }
-        legend{
-            font-size: 30pt;
-            font-family:'Courier New', Courier, monospace
+        ul li a:hover{background-color:black;
+                    color:white;}
+        .form{
+            position: absolute;
+            width: 400px;
+            top:80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 50px;
+            background: rgba(0,0,0,0.8);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+            border-radius: 15px;
         }
-    </style>
-    </head>
-    <body>
-        <div class="main">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="book.html">Books</a></li>
-                <li><a href="bookings.html">Bookings</a></li>
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="rules&regulations.html">Terms of Use</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                </ul>
-        </div>
-                  <div>
-                    <img src="images/Bookie logo.png" width="100px" height="90px">
-                </div> 
-        <form class="submission-form">
-                <fieldset>
-                    <legend>Sign up</legend>
-                    <h3>Your Information</h3>
-                        <div >
-                            <label for="firstname">First name: </label>
-                            <input type="text" id="firstname" name="user_firstname" /><br>
-                        </div>
-                        <div >
-                            <label for="lastname">Last name: </label>
-                            <input type="text" id="lastname" name="user_lastname" /><br>
-                        </div>
-                        <div >
-                            <label for="lastname">Username: </label>
-                            <input type="text" id="username" name="user_username" /><br>
-                        </div>
-                        <div >
-                            <label for="mail">Email Address: </label>
-                            <input type = "email" id="mail" name="user_mail" /><br>
-                        </div>
-                        <div >
-                            <label for="password">Password: </label>
-                            <input type = "password" id="password" name="user_password" /><br>
-                        </div>
+        .form h2{
+            margin:0 0 28px;
+            padding:0;
+            text-align: center;
+            color: #fff;
+         }
+         .form .inputForm{
+             position: relative;
+         }
+         .form .inputForm label{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0px ;
+            transition: 0.3s;
+            font-size: 16px;
+            color: white;
+            pointer-events: none;
+            
+         }
+         .form .inputForm input{
+            background: transparent;
+            width:100%;
+            padding: 10px 0px;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            
+         }     
+         
+         .form .inputForm input:focus  ~ label,
+         .form .inputForm input:valid  ~ label
+          {
+             top: -16px;
+             left:0;
+             color: white;
+             font-size: 12px;
+         }
+         .form input[type="submit"]{
+             border:none;
+             border-radius: 5px;
+             color:black;
+             background: white;
+             padding: 10px 20px;
+             cursor: pointer;
+         }
+         .footer{
+             margin-top:850px;
+         }
+         
+         </style>
+     </head>
+     
+     <body>
+            <div class="main">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="book.html">Books</a></li>
+                        <li><a href="bookings.html">Bookings</a></li>
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="rules&regulations.html">Terms of Use</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                </div>
+                          <div>
+                            <img src="images/Bookie logo.png" width="100px" height="90px">
+                        </div> 
+         <div class="form">
+             <h2>Sign Up</h2>
+             <form>
+                 <div class="inputForm">
+                     <input type="text" name="" required="">
+                     <label>First Name</label>
+                 </div>
+                 <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>Last Name</label>
+                </div>
+                <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>Username</label>
+                </div>
+                <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>Email Address</label>
+                </div>
+                <div class="inputForm">
+                    <input type="password" name="" required="">
+                    <label>Password</label>
+                </div>
+                <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>Address</label>
+                </div>
+                <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>City</label>
+                </div>
+                <div class="inputForm">
+                    <input type="text" name="" required="">
+                    <label>Zip code</label>
+                </div>
+                <input type="submit" name="" value="Submit">
+             </form>
 
-                        <h3>Shipping Information</h3>
-                        <div >
-                            <label for="Address">Address: </label>
-                            <textarea id="Address" name="user_address" ></textarea><br>
-                        </div>
-                        <div >
-                            <label for="city">City: </label>
-                            <input type="text" id="city" name="user_city" /><br>
-                        </div>
-                        <div >
-                            <label for="zipcode">Zip code: </label>
-                            <input type="text" id="zipcode" name="user_zipcode" /><br>
-                        </div>
-                        
-                        <div>
-                            <button type="submit" id="signupButton" onclick=" return validation()" >Sign Up</button>
-                        </div>
-                    
-        </form>
-        </fieldset>
-        <script>
-            function validation(){
-                var firstname= document.getElementById('firstname');
-                var lastname = document.getElementById('lastname');
-                var username = document.getElementById('username');
-                var email= document.getElementById('mail');
-                var password= document.getElementById('password');
-                var Address= document.getElementById('Address');
-                var city= document.getElementById('city');
-                var zipcode= document.getElementById('zipcode');
-        
-                if(firstname.value.trim() =="" || lastname.value.trim() =="" || username.value.trim() =="" ||email.value.trim() ==""||password.value.trim() ==""|| Address.value.trim() ==""|| city.value.trim() ==""|| zipcode.value.trim() ==""){
-                    alert("You can't leave it blank!");
-                    return false;
-                }
-                else{
-                    alert("Sign up successfully!");
-                    return true;
-                
-                }
-            }
-        </script> 
-        <footer>
-            Copyright &copy; 2019 BookieStore
+         </div>
+         <footer class="footer">
+                Copyright &copy; 2019 BookieStore
         </footer>
-    </body>
-    
+     </body>
+     
+
     </html>
-
-
-    
